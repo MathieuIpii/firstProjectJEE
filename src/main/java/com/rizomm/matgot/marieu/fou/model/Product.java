@@ -13,14 +13,49 @@ import javax.validation.constraints.NotNull;
 public class Product {
     @Id
     @GeneratedValue
-    int id;
+    private Long reference;
+    private String nom;
+    private Float prix;
+    private String description;
+    private int stock;
 
-    String name;
+    public Long getReference() {
+        return reference;
+    }
 
-    String description;
+    public void setReference(Long reference) {
+        this.reference = reference;
+    }
 
-    Float price;
+    public String getNom() {
+        return nom;
+    }
 
-    int stock;
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
+    public Float getPrix() {
+        return prix;
+    }
+
+    public void setPrix(Float prix) {
+        this.prix = prix;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
 }
