@@ -23,44 +23,14 @@ public class Product implements Serializable {
 
     @Id
     @GeneratedValue
-<<<<<<< HEAD
-    private Long reference;
-    private String nom;
-    private Float prix;
-    private String description;
-    private int stock;
-
-    public Long getReference() {
-        return reference;
-    }
-
-    public void setReference(Long reference) {
-        this.reference = reference;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public Float getPrix() {
-        return prix;
-    }
-
-    public void setPrix(Float prix) {
-        this.prix = prix;
-=======
-    Long id;
-    String name;
+    private Long id;
+    private String name;
     @NotNull
-    Long idCategory;
+    private Long idCategory;
     @Size(max = 2000)
-    String description;
-    Float price;
-    int stock;
+    private String description;
+    private Float price;
+    private int stock;
 
     public Product(){
 
@@ -92,7 +62,6 @@ public class Product implements Serializable {
 
     public void setIdCategory(Long idCategory) {
         this.idCategory = idCategory;
->>>>>>> origin/master
     }
 
     public String getDescription() {
@@ -103,8 +72,6 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-<<<<<<< HEAD
-=======
     public Float getPrice() {
         return price;
     }
@@ -113,7 +80,6 @@ public class Product implements Serializable {
         this.price = price;
     }
 
->>>>>>> origin/master
     public int getStock() {
         return stock;
     }
