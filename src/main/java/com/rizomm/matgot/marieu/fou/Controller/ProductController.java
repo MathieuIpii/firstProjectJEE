@@ -26,9 +26,9 @@ public class ProductController implements Serializable {
         return product;
     }
 
-    public String doCreateUser() {
+    public String doCreateProduct() {
         productEJB.create(product);
-        return "bienvenue.xhtml";
+        return "homePage.xhtml";
     }
 
     public String doFindUserById() {

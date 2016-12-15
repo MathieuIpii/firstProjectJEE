@@ -11,17 +11,5 @@ import javax.naming.InitialContext;
  */
 public abstract class AbstractEJBTest {
 
-    protected static Context ctx;
 
-    @BeforeClass
-    public static void initContainer() throws Exception {
-        ctx = new InitialContext();
-    }
-
-    @AfterClass
-    public static void closeContainer() throws Exception {
-        if (ctx != null) {
-            ctx.close();
-        }
-    }
 }

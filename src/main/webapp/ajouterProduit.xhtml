@@ -11,12 +11,17 @@
 <body>
 
     <h:form >
+        Nom du produit
         <h:inputText a:placeholder="Nom du produit">#{productController.product.name}</h:inputText>
-        <h:inputText a:placeholder="Description">#{productController.product.description}</h:inputText>
+        Description
+        <h:inputTextarea a:placeholder="Description">#{productController.product.description}</h:inputTextarea>
+        Prix
         <h:inputText a:placeholder="Prix">#{productController.product.price}</h:inputText>
+        Nombre de produit en stock
         <h:inputText a:placeholder="Nombre de produit en stock">#{productController.product.stock}</h:inputText>
+        Numéro de la catégorie
         <h:inputText a:placeholder="Numéro de la catégorie">#{productController.product.idCategory}</h:inputText>
-        <h:commandButton value="Valider" action="#{userController.doCreateUser}" style="background: green; color: white"></h:commandButton>
+        <h:commandButton value="Ajouter Prduit" action="#{productController.doCreateProduct}" style="background: green; color: white"></h:commandButton>
     </h:form>
 
 </body>

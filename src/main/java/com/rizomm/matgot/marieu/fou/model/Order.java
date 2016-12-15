@@ -8,11 +8,8 @@ import java.util.List;
  * Created by Mathieu on 17/11/2016.
  */
 
-@Entity
-public class Order {
-    @NotNull
-    int id;
 
-    List<OrderLine> lines;
+public class Order {
+
 
 }

@@ -17,7 +17,7 @@ import static com.rizomm.matgot.marieu.fou.model.Product.FIND_ALL;
 @Named
 public class ProductEJB {
 
-    @PersistenceContext(unitName = "chapitre2PU")
+    @PersistenceContext(unitName = "persistence")
     private EntityManager em;
 
     public void create(Product product){

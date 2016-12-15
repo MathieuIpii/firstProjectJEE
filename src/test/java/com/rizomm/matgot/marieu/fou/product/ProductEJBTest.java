@@ -16,24 +16,9 @@ import static org.junit.Assert.assertNotNull;
 public class ProductEJBTest extends AbstractEJBTest {
 
     @Test
-    public void shouldCreateABook() throws Exception {
+    public void shouldCreateAProduct() throws Exception {
 
-        // Creates an instance of product
-        Product prd = new Product("GoodMichel","un bon gros michel pour nico", 1L, 10F, 50);
 
-        Object ejb = ctx.lookup("java:global/chapitre2-samples-1.0.0-SNAPSHOT/BookEJB01");
-        assertNotNull(ejb);
-
-        // Looks up the EJB
-        ProductEJBIT prdEJB = (ProductEJBIT) PortableRemoteObject.narrow(ejb, ProductEJBIT.class);
-
-        // Persists the book to the database
-        int oldSize = prdEJB.findProducts().size();
-        prd = prdEJB.createProduct(prd);
-        assertNotNull("ID should not be null", prd.getId());
-
-        // Retrieves all the books from the database
-        assertEquals(oldSize+1, prdEJB.findProducts().size());
     }
 
 
