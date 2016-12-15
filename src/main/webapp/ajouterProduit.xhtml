@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:a="http://java.sun.com/jsf/composite">
+<head>
+    <title>Ajouter un produit</title>
+</head>
+<body>
+
+    <h:form >
+        <h:inputText a:placeholder="Nom du produit">#{productController.product.name}</h:inputText>
+        <h:inputText a:placeholder="Description">#{productController.product.description}</h:inputText>
+        <h:inputText a:placeholder="Prix">#{productController.product.price}</h:inputText>
+        <h:inputText a:placeholder="Nombre de produit en stock">#{productController.product.stock}</h:inputText>
+        <h:inputText a:placeholder="Numéro de la catégorie">#{productController.product.idCategory}</h:inputText>
+        <h:commandButton value="Valider" action="#{userController.doCreateUser}" style="background: green; color: white"></h:commandButton>
+    </h:form>
+
+</body>
+</html>

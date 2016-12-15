@@ -12,9 +12,9 @@
 
         <h:dataTable value="#{productEJB.findAllProduct()}" var="user">
             <h:column>
-                <h:outputText value="#{userController.user.nom}"></h:outputText>
-                <h:outputText value="#{userController.user.prenom}"></h:outputText>
-                <h:outputText value="#{userController.user.age}"></h:outputText>
+                <h:outputText value="#{productController.product.name}"></h:outputText>
+                <h:outputText value="#{productController.product.description}"></h:outputText>
+                <h:outputText value="#{productController.product.price}"></h:outputText>
             </h:column>
         </h:dataTable>
     </body>
