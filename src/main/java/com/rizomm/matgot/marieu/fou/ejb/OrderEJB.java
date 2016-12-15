@@ -1,6 +1,4 @@
-package com.rizomm.matgot.marieu.fou.dao;
-
-import com.rizomm.matgot.marieu.fou.model.Product;
+package com.rizomm.matgot.marieu.fou.ejb;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
@@ -8,8 +6,6 @@ import javax.ejb.Stateless;
 import javax.inject.Named;
 =======
 import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-import java.util.List;
 >>>>>>> origin/master
 
 /**
@@ -22,7 +18,7 @@ import java.util.List;
 =======
 @Remote
 >>>>>>> origin/master
-public class OrderDAO {
+public class OrderEJB {
 
     private EntityManager em;
 

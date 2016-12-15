@@ -1,4 +1,4 @@
-package com.rizomm.matgot.marieu.fou.dao;
+package com.rizomm.matgot.marieu.fou.ejb;
 
 import javax.ejb.Stateless;
 import javax.inject.Named;
@@ -9,5 +9,5 @@ import javax.inject.Named;
 
 @Stateless
 @Named
-public class CategoryDAO {
+public class CategoryEJB {
 }

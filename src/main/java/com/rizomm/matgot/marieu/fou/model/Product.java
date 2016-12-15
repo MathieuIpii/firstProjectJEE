@@ -19,8 +19,6 @@ import static com.rizomm.matgot.marieu.fou.model.Product.*;
 public class Product implements Serializable {
 
     public static final String FIND_ALL = "Product.findAllProducts";
-
-
     @Id
     @GeneratedValue
     private Long id;
@@ -87,4 +85,5 @@ public class Product implements Serializable {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
 }

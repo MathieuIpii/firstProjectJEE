@@ -1,4 +1,4 @@
-package com.rizomm.matgot.marieu.fou.dao;
+package com.rizomm.matgot.marieu.fou.ejb;
 
 import com.rizomm.matgot.marieu.fou.model.Product;
 
@@ -16,7 +16,7 @@ import static com.rizomm.matgot.marieu.fou.model.Product.*;
 
 @Stateless
 @Remote
-public class ProductDAOImpl implements ProductDaoIT {
+public class ProductEJBImpl implements ProductEJBIT {
 
     private EntityManager em;
 

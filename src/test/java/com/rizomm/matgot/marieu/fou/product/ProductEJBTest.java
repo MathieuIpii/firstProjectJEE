@@ -1,7 +1,7 @@
 package com.rizomm.matgot.marieu.fou.product;
 
 import com.rizomm.matgot.marieu.fou.AbstractEJBTest;
-import com.rizomm.matgot.marieu.fou.dao.ProductDaoIT;
+import com.rizomm.matgot.marieu.fou.ejb.ProductEJBIT;
 import com.rizomm.matgot.marieu.fou.model.Product;
 import org.junit.Test;
 
@@ -25,7 +25,7 @@ public class ProductEJBTest extends AbstractEJBTest {
         assertNotNull(ejb);
 
         // Looks up the EJB
-        ProductDaoIT prdEJB = (ProductDaoIT) PortableRemoteObject.narrow(ejb, ProductDaoIT.class);
+        ProductEJBIT prdEJB = (ProductEJBIT) PortableRemoteObject.narrow(ejb, ProductEJBIT.class);
 
         // Persists the book to the database
         int oldSize = prdEJB.findProducts().size();
