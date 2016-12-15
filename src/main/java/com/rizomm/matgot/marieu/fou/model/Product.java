@@ -29,17 +29,19 @@ public class Product implements Serializable {
     private String description;
     private Float price;
     private int stock;
+    private String image;
 
     public Product(){
 
     }
 
-    public Product(String name, String description, Long idCategory, Float price, int stock){
+    public Product(String name, String description, Long idCategory, Float price, int stock, String image){
         this.name = name;
         this.description = description;
         this.idCategory = idCategory;
         this.price = price;
         this.stock = stock;
+        this.image = image;
     }
 
     public Long getId() {
@@ -86,4 +88,11 @@ public class Product implements Serializable {
         this.stock = stock;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }
