@@ -38,4 +38,8 @@ public class ProductController implements Serializable {
         user.setAge(u.getAge());*/
         return "ficheProduit.xhtml";
     }
+
+    public void addToCart(){
+        productEJB.addToCart(product);
+    }
 }

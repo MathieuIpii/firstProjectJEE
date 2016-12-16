@@ -33,4 +33,8 @@ public class ProductEJB {
         em.joinTransaction();
         return query.getResultList();
     }
+
+    public void addToCart(Product p){
+
+    }
 }
