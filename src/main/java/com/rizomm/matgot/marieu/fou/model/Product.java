@@ -19,29 +19,29 @@ import static com.rizomm.matgot.marieu.fou.model.Product.*;
 public class Product implements Serializable {
 
     public static final String FIND_ALL = "Product.findAllProducts";
-
-
     @Id
     @GeneratedValue
-    Long id;
-    String name;
+    private Long id;
+    private String name;
     @NotNull
-    Long idCategory;
+    private Long idCategory;
     @Size(max = 2000)
-    String description;
-    Float price;
-    int stock;
+    private String description;
+    private Float price;
+    private int stock;
+    private String image;
 
     public Product(){
 
     }
 
-    public Product(String name, String description, Long idCategory, Float price, int stock){
+    public Product(String name, String description, Long idCategory, Float price, int stock, String image){
         this.name = name;
         this.description = description;
         this.idCategory = idCategory;
         this.price = price;
         this.stock = stock;
+        this.image = image;
     }
 
     public Long getId() {
@@ -86,5 +86,13 @@ public class Product implements Serializable {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
