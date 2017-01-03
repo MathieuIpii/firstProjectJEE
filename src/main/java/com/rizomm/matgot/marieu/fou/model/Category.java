@@ -1,6 +1,8 @@
 package com.rizomm.matgot.marieu.fou.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -9,4 +11,15 @@ import javax.validation.constraints.NotNull;
 
 public class Category {
 
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    public Category(){
+
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
