@@ -1,6 +1,5 @@
 package com.rizomm.matgot.marieu.fou.Controller;
 
-import com.rizomm.matgot.marieu.fou.dao.CategoryDao;
 import com.rizomm.matgot.marieu.fou.ejb.ICategoryDAO;
 import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
 import com.rizomm.matgot.marieu.fou.model.Category;

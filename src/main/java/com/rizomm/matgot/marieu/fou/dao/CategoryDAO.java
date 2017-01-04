@@ -16,6 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.rizomm.matgot.marieu.fou.helper.Utils.*;
+
 /**
  * Created by Mathieu on 17/11/2016.
  */
@@ -42,7 +44,7 @@ public class CategoryDAO implements ICategoryDAO, Serializable {
     }
 
     @Override
-    public Category findCategoryById(int idCategory) {
+    public Category findCategoryById(Long idCategory) {
         Category findCategory = em.find(Category.class, idCategory);
         return findCategory;
     }
@@ -98,7 +100,7 @@ public class CategoryDAO implements ICategoryDAO, Serializable {
                     return generateMessageError400("L'id de la Category doit être un chiffre ! ");
                 }
 
-                category.setId(Integer.parseInt(idString));
+                category.setId((long) Integer.parseInt(idString));
 
             }else if(isNotEmpty(jsonCategory,"label")){
 

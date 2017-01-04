@@ -1,6 +1,7 @@
 package com.rizomm.matgot.marieu.fou.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -12,80 +13,87 @@ import static com.rizomm.matgot.marieu.fou.model.Product.*;
  */
 
 @Entity
-@NamedQuery(name = FIND_ALL, query = "SELECT p FROM Product p")
 @NamedQueries({
-        @NamedQuery(name = FIND_ALL, query = "select p from Product p"),
-        @NamedQuery(name = FIND_ALL_BY_CATEGORY, query = "select p from Product p where p.category.id = :idCategory"),
-        @NamedQuery(name = COUNT_ALL, query = "select count(p) from Product p"),
-        @NamedQuery(name = COUNT_ALL_BY_CATEGORY, query = "select count(p) from Product p where p.category.id = :idCategory"),
+        @NamedQuery(name = FIND_ALL, query = "select c from Product c order by c.id asc"),
+        @NamedQuery(name = FIND_ALL_BY_CATEGORY, query = "select c from Product c where c.category.id = :idCategory order by c.id asc"),
+        @NamedQuery(name = COUNT_ALL, query = "select count(c) from Product c"),
+        @NamedQuery(name = COUNT_ALL_BY_CATEGORY, query = "select count(c) from Product c where c.category.id = :idCategory"),
         @NamedQuery(name = DELETE_ALL, query = " delete from Product"),
 })
 public class Product implements Serializable {
 
-    public static final String FIND_ALL = "Product.findAllProducts";
+    public static final String FIND_ALL = "Product.findAllProduct";
     public static final String COUNT_ALL = "Product.countAllProduct";
     public static final String COUNT_ALL_BY_CATEGORY = "Product.countAllProductByCategory";
     public static final String DELETE_ALL = "Product.deleteAllProduct";
     public static final String FIND_ALL_BY_CATEGORY = "Product.findAllProductByCategory";
+
     @Id
-    @GeneratedValue
-    private Long id;
-    private String name;
-    @NotNull
-    private Long idCategory;
-    @Size(max = 2000)
-    private String description;
-    private Float price;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    @ManyToOne
+    @JoinColumn(name = "category_fk", nullable = false)
+    private Category category;
+    @NotNull(message = "The stock can't be empty")
+    @Min(value = 0, message = "The stock can't be negative")
     private int stock;
-    private String image;
+    @NotNull(message = "The price can't be empty")
+    @Min(value = 0, message = "The value can't be negative")
+    private double price;
+    @NotNull(message = "The name can't be empty")
+    private String name;
+    @NotNull(message = "The desciption can't be empty")
+    @Lob
+    @Column
+    private String description;
+    @NotNull(message = "The urlPicture can't be empty")
+    private String urlPicture;
 
-    public Product(){
-
+    public Product() {
     }
 
-    public Product(String name, String description, Long idCategory, Float price, int stock, String image){
+    public Product(int id, Category category, int stock, float price, String name, String description, String urlPicture) {
+        this.id = id;
+        this.category = category;
+        this.stock = stock;
+        this.price = price;
         this.name = name;
         this.description = description;
-        this.idCategory = idCategory;
-        this.price = price;
-        this.stock = stock;
-        this.image = image;
+        this.urlPicture = urlPicture;
     }
 
-    public Long getId() {
+    public Product(Category category, int stock, float price, String name, String description, String urlPicture) {
+        this.category = category;
+        this.stock = stock;
+        this.price = price;
+        this.name = name;
+        this.description = description;
+        this.urlPicture = urlPicture;
+    }
+
+    public Product(Category category, int stock, float price, String name, String urlPicture) {
+        this.category = category;
+        this.stock = stock;
+        this.price = price;
+        this.name = name;
+        this.description = description;
+        this.urlPicture = urlPicture;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Category getCategory() {
+        return category;
     }
 
-    public Long getIdCategory() {
-        return idCategory;
-    }
-
-    public void setIdCategory(Long idCategory) {
-        this.idCategory = idCategory;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Float getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
+    public void setCategory(Category idCategory) {
+        this.category = idCategory;
     }
 
     public int getStock() {
@@ -96,11 +104,43 @@ public class Product implements Serializable {
         this.stock = stock;
     }
 
-    public String getImage() {
-        return image;
+    public double getPrice() {
+        return price;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getUrlPicture() {
+        return urlPicture;
+    }
+
+    public void setUrlPicture(String urlPicture) {
+        this.urlPicture = urlPicture;
+    }
+
+    public String getShortDescription() {
+        if(this.description.length() <= 103){
+            return description;
+        }else{
+            return description.substring(0,100) + "...";
+        }
     }
 }

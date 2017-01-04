@@ -14,7 +14,7 @@ public interface IProductDAO {
 
     Product createProduct(Product product);
 
-    Product findProductById(int idProduct);
+    Product findProductById(Long idProduct);
 
     List<Product> findAllProduct();
 
@@ -30,7 +30,7 @@ public interface IProductDAO {
 
     Product updateProduct(Product product);
 
-    Map<String, Object> convertJsonToProduct(String jsonString, ICategoryDao CD);
+    Map<String, Object> convertJsonToProduct(String jsonString, ICategoryDAO CD);
 
     JSONObject convertProductsToJson(List<Product> products);
 

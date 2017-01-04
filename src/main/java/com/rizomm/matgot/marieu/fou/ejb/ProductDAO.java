@@ -46,7 +46,7 @@ public class ProductDAO implements IProductDAO, Serializable {
     }
 
     @Override
-    public Product findProductById(int idProduct) {
+    public Product findProductById(Long idProduct) {
         Product findProduct = em.find(Product.class, idProduct);
         return findProduct;
     }
@@ -202,7 +202,7 @@ public class ProductDAO implements IProductDAO, Serializable {
                 if(category.getId() == 0){
                     category.setId(CD.createCategory(category).getId());
                 }else{
-                    int idCategory = category.getId();
+                    Long idCategory = category.getId();
                     category = CD.findCategoryById(idCategory);
                     if(category == null){
                         return generateMessageError400("La catégorie avec l'id : " + idCategory + " n'éxiste pas");
