@@ -37,25 +37,25 @@ public class CartService implements IShoppingCartService {
             JSONObject json = new JSONObject(jsonString);
 
             if (isEmpty(json, "id")) {
-                return generateMessageError400("L'id du produit est vide !");
+                return generateMessageError400("L'id du produit est nul");
             } else if (!isInt(json.getString("id"))) {
-                return generateMessageError400("L'id doit être un chiffre !");
+                return generateMessageError400("L'id doit être un int");
             } else if (json.getInt("id") < 0) {
-                return generateMessageError400("L'id doit être un chiffre positif !");
+                return generateMessageError400("L'id doit être un int positif");
             }
 
             if (isEmpty(json, "quantity")) {
-                return generateMessageError400("La quantité ne doit pas être vide, il faut indiquer soit +1 ou -1 !");
+                return generateMessageError400("La quantité ne doit pas être nulle.");
             } else if (!isInt(json.getString("quantity"))) {
-                return generateMessageError400("La quantité doit être un chiffre, il faut indiquer soit +1 ou -1 !");
+                return generateMessageError400("La quantité doit être un int.");
             } else if (json.getInt("quantity") != 1 && json.getInt("quantity") != -1) {
-                return generateMessageError400("La quantité doit être +1 ou -1 !");
+                return generateMessageError400("La quantité doit être +1 ou -1");
             }
 
             Product product = PD.findProductById(json.getInt("id"));
 
             if (isEmpty(product)) {
-                return generateMessageError400("Le produit n'existe pas !");
+                return generateMessageError400("Le produit n'existe pas. Veuillez l'ajouter.");
             }
 
             newQty = json.getInt("quantity");
@@ -75,18 +75,18 @@ public class CartService implements IShoppingCartService {
 
             if (!existCart) {
                 if(newQty == -1){
-                    return generateMessageError400("Vous ne pouvez pas diminuer la quantité d'un produit qui n'est pas dans votre panier");
+                    return generateMessageError400("Vous ne pouvez pas diminuer la quantité d'un produit qui n'est pas dans votre panier.");
                 }
                 listShoppingCart.add(new OrderLine(product, newQty));
             }
 
         } catch (JSONException e) {
-            return generateMessageError400("Le format de la requête n'est pas respecté !");
+            return generateMessageError400("La requête n'est pas bien écrite.");
         } catch (Exception e) {
-            return generateMessageError400("Aie, une erreur est survenue !");
+            return generateMessageError400("Une erreur est survenue.");
         }
 
-        return generateMessageSuccess201("Produit ajouté au panier avec succés. Il y a " + newQty + " quantité de ce produit dans votre panier");
+        return generateMessageSuccess201("Le produit a été ajouté au panier. (" + newQty + ")");
     }
 
     @Override
@@ -98,11 +98,11 @@ public class CartService implements IShoppingCartService {
             JSONObject json = new JSONObject(jsonString);
 
             if (isEmpty(json, "id")) {
-                return generateMessageError400("L'id du produit est vide !");
+                return generateMessageError400("L'id du produit est nul");
             } else if (!isInt(json.getString("id"))) {
-                return generateMessageError400("L'id doit être un chiffre !");
+                return generateMessageError400("L'id doit être un int");
             } else if (json.getInt("id") < 0) {
-                return generateMessageError400("L'id doit être un chiffre positif !");
+                return generateMessageError400("L'id doit être un int positif");
             }
 
 
@@ -116,16 +116,16 @@ public class CartService implements IShoppingCartService {
             }
 
             if (!existCart) {
-                return generateMessageError400("Ce produit n'existe pas dans votre panier vueillez recharger votre panier.");
+                return generateMessageError400("Ce produit n'existe pas dans votre panier.");
             }else{
                 listShoppingCart.remove(shoppingCartToDelete);
             }
 
         } catch (Exception e) {
-            return generateMessageError400("Aie, une erreur est survenue !");
+            return generateMessageError400("Une erreur est survenue");
         }
 
-        return generateMessageSuccess201("Produit supprimé avec succés.");
+        return generateMessageSuccess201("Le produit a été supprimé avec succés.");
     }
 
     @Override

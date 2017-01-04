@@ -99,7 +99,7 @@ public class CategoryDAO implements ICategoryDAO, Serializable {
                 String idString = jsonCategory.getString("id");
 
                 if(!isInt(idString)){
-                    return generateMessageError400("L'id de la Category doit être un chiffre ! ");
+                    return generateMessageError400("L'id de la catégorie doit être un int.");
                 }
 
                 category.setId((long) Integer.parseInt(idString));
@@ -107,12 +107,12 @@ public class CategoryDAO implements ICategoryDAO, Serializable {
             }else if(isNotEmpty(jsonCategory,"label")){
 
                 if(isTooLarge(jsonCategory,"label",255)){
-                    return generateMessageError400("Le label de la catégorie est trop long !");
+                    return generateMessageError400("Le label de la catégorie est trop long.");
                 }
 
                 category.setLabel(jsonCategory.getString("label"));
             }else{
-                return generateMessageError400("La category est mal paramétrée ! ");
+                return generateMessageError400("La categorie n'est pas bien renseignée ! ");
             }
 
         } catch (JSONException e) {

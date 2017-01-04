@@ -34,19 +34,19 @@ public class Product implements Serializable {
     @ManyToOne
     @JoinColumn(name = "category_fk", nullable = false)
     private Category category;
-    @NotNull(message = "The stock can't be empty")
-    @Min(value = 0, message = "The stock can't be negative")
+    @NotNull(message = "Le stock ne peux pas être nul")
+    @Min(value = 0, message = "Le stock ne peux pas être négatif")
     private int stock;
-    @NotNull(message = "The price can't be empty")
-    @Min(value = 0, message = "The value can't be negative")
+    @NotNull(message = "Le prix ne doit pas être nul")
+    @Min(value = 0, message = "Le prix ne peux pas être négatif")
     private double price;
-    @NotNull(message = "The name can't be empty")
+    @NotNull(message = "Le nom ne peut pas être nul")
     private String name;
-    @NotNull(message = "The desciption can't be empty")
+    @NotNull(message = "La description ne peut pas etre nul")
     @Lob
     @Column
     private String description;
-    @NotNull(message = "The urlPicture can't be empty")
+    @NotNull(message = "L'url de l'image ne peut pas être nulle")
     private String urlPicture;
 
     public Product() {

@@ -147,19 +147,19 @@ public class ProductDAO implements IProductDAO, Serializable {
             JSONObject json = new JSONObject(jsonString);
 
             if(isEmpty(json,"id")){
-                return generateMessageError400("L'id est obligatoire !");
+                return generateMessageError400("L'id est obligatoire");
             }else if(!isInt(json.getString("id"))){
-                return generateMessageError400("L'id doit être un chiffre !");
+                return generateMessageError400("L'id doit être un int");
             }else if(json.getInt("id") < 0){
-                return generateMessageError400("L'id doit être un chiffre positif !");
+                return generateMessageError400("L'id doit être un int positif");
             }
 
             result.put("ID",json.getInt("id"));
             result.put("ERROR",false);
         } catch (JSONException e) {
-            return generateMessageError400("Le format de la requête n'est pas respecté !");
+            return generateMessageError400("La requête n'est pas bien écrite");
         }catch (Exception e) {
-            return generateMessageError400("Aie, une erreur est survenue !");
+            return generateMessageError400("Une erreur est survenue");
         }
 
         return result;
@@ -176,37 +176,37 @@ public class ProductDAO implements IProductDAO, Serializable {
 
 
             if(isEmpty(json,"stock")){
-                return generateMessageError400("Le stock est obligatoire !");
+                return generateMessageError400("Le stock est obligatoire");
             }else if(!isInt(json.getString("stock"))){
-                return generateMessageError400("Le stock doit être un chiffre !");
+                return generateMessageError400("Le stock doit être un int");
             }else if(json.getInt("stock") < 0){
-                return generateMessageError400("Le stock doit être un chiffre positif !");
+                return generateMessageError400("Le stock doit être un int positif");
             }
 
             if(isEmpty(json,"price")){
-                return generateMessageError400("Le prix est obligatoire !");
+                return generateMessageError400("Le prix est obligatoire");
             }else if(!isDouble(json.getString("price"))){
-                return generateMessageError400("Le prix doit être un nombre !");
+                return generateMessageError400("Le prix doit être un double");
             }else if(isNotConvertDoubleToDixieme( Double.parseDouble(json.getString("price")))){
-                return generateMessageError400("Le prix est trop grand !");
+                return generateMessageError400("Le prix est trop long");
             }else if(convertDoubleToDixieme(json.getString("price")) < 0){
-                return generateMessageError400("Le prix doit être un chiffre positif !");
+                return generateMessageError400("Le prix doit être un double positif");
             }
 
             if(isEmpty(json,"name")){
-                return generateMessageError400("Le nom est obligatoire !");
+                return generateMessageError400("Le nom est obligatoire");
             }else if(isTooLarge(json,"name",255)){
-                return generateMessageError400("Le nom est trop long !");
+                return generateMessageError400("Le nom est trop long");
             }
 
             if(isEmpty(json,"urlPicture")){
-                return generateMessageError400("L'url de l'image est obligatoire !");
+                return generateMessageError400("L'image est obligatoire");
             }else if(isTooLarge(json,"urlPicture",255)){
-                return generateMessageError400("L'url de l'image est trop longue !");
+                return generateMessageError400("L'url de l'image est trop longue");
             }
 
             if(isEmpty(json,"description")){
-                return generateMessageError400("La description est obligatoire !");
+                return generateMessageError400("La description est obligatoire");
             }
 
             product.setStock(json.getInt("stock"));
@@ -217,7 +217,7 @@ public class ProductDAO implements IProductDAO, Serializable {
 
             if(isNotEmpty(json,"id")){
                 if(!isInt(json.getString("id"))){
-                    return generateMessageError400("L'id doit être un nombre !");
+                    return generateMessageError400("L'id doit être un int");
                 }
                 product.setId(json.getInt("id"));
             }
@@ -238,22 +238,22 @@ public class ProductDAO implements IProductDAO, Serializable {
                     Long idCategory = category.getId();
                     category = CD.findCategoryById(idCategory);
                     if(category == null){
-                        return generateMessageError400("La catégorie avec l'id : " + idCategory + " n'éxiste pas");
+                        return generateMessageError400("La catégorie avec l'id : " + idCategory + " n'a pas été trouvé");
                     }
                 }
 
                 product.setCategory(category);
 
             }else{
-                return generateMessageError400("Une catégorie est obligatoire !");
+                return generateMessageError400("La catégorie est obligatoire");
             }
 
             result.put("PRODUCT",product);
             result.put("ERROR",false);
         } catch (JSONException e) {
-            return generateMessageError400("Le format de la requête n'est pas respecté !");
+            return generateMessageError400("La requête n'est pas bien écrite");
         }catch (Exception e) {
-            return generateMessageError400("Aie, une erreur est survenue !");
+            return generateMessageError400("Une erreur est survenue");
         }
 
         return result;
@@ -268,19 +268,19 @@ public class ProductDAO implements IProductDAO, Serializable {
             JSONObject json = new JSONObject(jsonString);
 
             if(isEmpty(json,"id")){
-                return generateMessageError400("L'id est obligatoire !");
+                return generateMessageError400("L'id est obligatoire");
             }else if(!isInt(json.getString("id"))){
-                return generateMessageError400("L'id doit être un chiffre !");
+                return generateMessageError400("L'id doit être un int");
             }else if(json.getInt("id") < 0){
-                return generateMessageError400("L'id doit être un chiffre positif !");
+                return generateMessageError400("L'id doit être un int positif");
             }
 
             result.put("ID",json.getInt("id"));
             result.put("ERROR",false);
         } catch (JSONException e) {
-            return generateMessageError400("Le format de la requête n'est pas respecté !");
+            return generateMessageError400("La requête n'est pas bien écrite");
         }catch (Exception e) {
-            return generateMessageError400("Aie, une erreur est survenue !");
+            return generateMessageError400("Une erreur est survenue");
         }
 
         return result;

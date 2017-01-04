@@ -24,7 +24,7 @@ public class Category implements Serializable{
     @GeneratedValue
     private Long id;
     @NotNull
-    @Size(min = 1, max = 30, message = "Label should be between 1 and 30")
+    @Size(min = 1, max = 30, message = "Le label doit être entre 1 and 30")
     private String label;
 
     public Category(){}

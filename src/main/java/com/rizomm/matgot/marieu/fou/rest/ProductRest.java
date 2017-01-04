@@ -38,10 +38,10 @@ public class ProductRest {
         if (result.get("ERROR").toString().length() == 0) {
             Product productResult = (Product) result.get("PRODUCT");
             if (Utils.isNotEmpty(productResult.getId()) && Utils.isNotEmpty(PD.findProductById(productResult.getId()))) {
-                result = Utils.generateMessageError400("Le produit existe déja, utiliser la methode PUT pour le modifier.");
+                result = Utils.generateMessageError400("Ce produit existe déja.");
             } else {
                 Product product = PD.createProduct(productResult);
-                result = Utils.generateMessageSuccess201("Produit créé avec l'id : " + product.getId() + " et avec la catégorie id : " + product.getCategory().getId());
+                result = Utils.generateMessageSuccess201("Le produit a été créé avec l'id : " + product.getId() + " et avec la catégorie : " + product.getCategory().getId());
             }
         }
 
@@ -58,9 +58,9 @@ public class ProductRest {
             Product product;
             if (Utils.isNotEmpty(productResult.getId()) && Utils.isNotEmpty(PD.findProductById(productResult.getId()))) {
                 product = PD.updateProduct(productResult);
-                result = Utils.generateMessageSuccess200("Produit modifié avec succés");
+                result = Utils.generateMessageSuccess200("Le produit a été modifié avec succés");
             } else {
-                result = Utils.generateMessageError400("Le produit n'existe pas, utiliser la méthode POST pour l'ajouter.");
+                result = Utils.generateMessageError400("Le produit n'existe pas, veillez l'ajouter.");
             }
         }
 
@@ -74,9 +74,9 @@ public class ProductRest {
 
         if (result.get("ERROR").toString().length() == 0) {
             if (PD.deleteProductById((Integer) result.get("idProduct"))) {
-                result = Utils.generateMessageSuccess200("Produit supprimé avec succés.");
+                result = Utils.generateMessageSuccess200("Le produit a été supprimé avec succés.");
             } else {
-                result = Utils.generateMessageError400("Le produit n'existe pas.");
+                result = Utils.generateMessageError400("Le produit n'existe pas. Veillez l'ajouter.");
             }
         }
 
