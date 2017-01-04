@@ -17,6 +17,8 @@ import java.util.List;
 import java.util.Map;
 
 import static com.rizomm.matgot.marieu.fou.helper.Utils.*;
+import static com.rizomm.matgot.marieu.fou.model.Product.DELETE_ALL;
+import static com.rizomm.matgot.marieu.fou.model.Product.FIND_ALL;
 
 /**
  * Created by Mathieu on 17/11/2016.

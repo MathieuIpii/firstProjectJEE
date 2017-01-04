@@ -11,8 +11,9 @@ import java.util.Map;
  * Created by margotelmadi on 04/01/2017.
  */
 public interface IProductDAO {
-
     Product createProduct(Product product);
+
+    Product findProductById(int idProduct);
 
     Product findProductById(Long idProduct);
 
@@ -39,8 +40,6 @@ public interface IProductDAO {
     List<Product> findAllProductByPage(int start, int limit);
 
     List<Product> findAllProductByPageAndCategory(int start, int limit, int idCategory);
-
-    Map<String, Object> convertJsonToProduct(String jsonString, ICategoryDAO CD);
 
     Map<String,Object> convertJsonToProductForDelete(String jsonProduct);
 }

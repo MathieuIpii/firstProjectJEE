@@ -46,6 +46,12 @@ public class ProductDAO implements IProductDAO, Serializable {
     }
 
     @Override
+    public Product findProductById(int idProduct) {
+        Product findProduct = em.find(Product.class, idProduct);
+        return findProduct;
+    }
+
+    @Override
     public Product findProductById(Long idProduct) {
         Product findProduct = em.find(Product.class, idProduct);
         return findProduct;
@@ -130,6 +136,11 @@ public class ProductDAO implements IProductDAO, Serializable {
     @Override
     public Product updateProduct(Product product) {
         return em.merge(product);
+    }
+
+    @Override
+    public Map<String, Object> convertJsonToProduct(String jsonString, ICategoryDAO CD) {
+        return null;
     }
 
     @Override

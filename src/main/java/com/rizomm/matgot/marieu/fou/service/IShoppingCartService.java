@@ -1,6 +1,7 @@
 package com.rizomm.matgot.marieu.fou.service;
 
 import com.rizomm.ipii.steven.dao.IProductDao;
+import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
 import org.codehaus.jettison.json.JSONObject;
 
 import javax.ejb.Remote;
@@ -13,11 +14,11 @@ import java.util.Map;
 @Remote
 public interface IShoppingCartService extends Serializable {
 
-    Map<String, Object> addProductCart(String jsonString, IProductDao PD);
+    Map<String, Object> addProductCart(String jsonString, IProductDAO PD);
 
     Map<String, Object> deleteProductToCart(String jsonString);
 
-    JSONObject getCart(IProductDao PD);
+    JSONObject getCart(IProductDAO PD);
 
     boolean payer();
 
