@@ -24,6 +24,10 @@ public class ProductEJB {
         em.persist(product);
     }
 
+    public void delete(Product product){
+        em.detach(product);
+    }
+
     public Product findProduct(Long id){
         return em.find(Product.class, id);
     }
