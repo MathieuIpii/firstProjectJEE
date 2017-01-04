@@ -1,5 +1,7 @@
 package com.rizomm.matgot.marieu.fou.rest;
 
+import com.rizomm.matgot.marieu.fou.ejb.ICategoryDAO;
+import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
 import com.rizomm.matgot.marieu.fou.ejb.ProductEJB;
 import com.rizomm.matgot.marieu.fou.helper.Utils;
 import com.rizomm.matgot.marieu.fou.model.Product;
@@ -24,10 +26,10 @@ import java.util.Map;
 public class ProductRest {
 
     @EJB
-    private ProductEJBIT PD;
+    private IProductDAO PD;
 
     @EJB
-    private CategoryEJB CD;
+    private ICategoryDAO CD;
 
     @POST
     @Produces("application/json")
@@ -44,7 +46,7 @@ public class ProductRest {
             }
         }
 
-        return Response.status((int) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
+        return Response.status((Integer) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
     }
 
     @PUT
@@ -63,7 +65,7 @@ public class ProductRest {
             }
         }
 
-        return Response.status((int) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
+        return Response.status((Integer) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
     }
 
     @DELETE
@@ -72,14 +74,14 @@ public class ProductRest {
         Map<String, Object> result = PD.convertJsonToProductForDelete(jsonProduct);
 
         if (!((boolean) result.get("ERROR"))) {
-            if (PD.deleteProductById((int) result.get("idProduct"))) {
+            if (PD.deleteProductById((Integer) result.get("idProduct"))) {
                 result = Utils.generateMessageSuccess200("Produit supprimé avec succés.");
             } else {
                 result = Utils.generateMessageError400("Le produit n'existe pas.");
             }
         }
 
-        return Response.status((int) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
+        return Response.status((Integer) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
     }
 
     @GET
@@ -94,7 +96,7 @@ public class ProductRest {
 
         Map<String, Object> result = Utils.generateMessageSuccess200(jsonProducts);
 
-        return Response.status((int) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
+        return Response.status((Integer) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
     }
 
     @GET
@@ -111,7 +113,7 @@ public class ProductRest {
 
         Map<String, Object> result = Utils.generateMessageSuccess200(jsonProducts);
 
-        return Response.status((int) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
+        return Response.status((Integer) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
     }
 
     @GET
@@ -129,7 +131,7 @@ public class ProductRest {
         }
         Map<String, Object> result = Utils.generateMessageSuccess200(jsonCountProducts);
 
-        return Response.status((int) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
+        return Response.status((Integer) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
     }
 
     @GET
@@ -147,6 +149,6 @@ public class ProductRest {
         }
         Map<String, Object> result = Utils.generateMessageSuccess200(jsonCountProducts);
 
-        return Response.status((int) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
+        return Response.status((Integer) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
     }
 }

@@ -11,7 +11,7 @@ public interface ICategoryDAO {
 
     Category createCategory(Category category);
 
-    Category findCategoryById(int idCategory);
+    Category findCategoryById(Long idCategory);
 
     void deleteAllCategory();
 
