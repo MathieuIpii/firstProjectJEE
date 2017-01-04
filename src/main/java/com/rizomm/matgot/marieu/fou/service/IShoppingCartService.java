@@ -1,6 +1,5 @@
 package com.rizomm.matgot.marieu.fou.service;
 
-import com.rizomm.ipii.steven.dao.IProductDao;
 import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
 import org.codehaus.jettison.json.JSONObject;
 

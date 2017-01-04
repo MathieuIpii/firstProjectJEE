@@ -1,6 +1,7 @@
 package com.rizomm.matgot.marieu.fou.service;
 
 import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
+import com.rizomm.matgot.marieu.fou.model.OrderLine;
 import com.rizomm.matgot.marieu.fou.model.Product;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
@@ -15,6 +16,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static com.rizomm.matgot.marieu.fou.helper.Utils.*;
+
 /**
  * Created by Mathieu on 17/11/2016.
  */
@@ -24,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 @Remote
 public class CartService implements IShoppingCartService {
 
-    private List<ShoppingCart> listShoppingCart = new ArrayList<>();
+    private List<OrderLine> listShoppingCart = new ArrayList();
 
     @Override
     public Map<String, Object> addProductCart(String jsonString, IProductDAO PD) {
@@ -57,8 +60,8 @@ public class CartService implements IShoppingCartService {
 
             newQty = json.getInt("quantity");
             boolean existCart = false;
-            for (ShoppingCart shoppingCart : listShoppingCart) {
-                if (shoppingCart.getProduct().getId() == product.getId()) {
+            for (OrderLine shoppingCart : listShoppingCart) {
+                if (shoppingCart.getProd().getId() == product.getId()) {
                     newQty = shoppingCart.getQuantity() + newQty;
                     if (newQty <= 0) {
                         return deleteProductToCart(jsonString);
@@ -74,7 +77,7 @@ public class CartService implements IShoppingCartService {
                 if(newQty == -1){
                     return generateMessageError400("Vous ne pouvez pas diminuer la quantité d'un produit qui n'est pas dans votre panier");
                 }
-                listShoppingCart.add(new ShoppingCart(product, newQty));
+                listShoppingCart.add(new OrderLine(product, newQty));
             }
 
         } catch (JSONException e) {
@@ -104,9 +107,9 @@ public class CartService implements IShoppingCartService {
 
 
             boolean existCart = false;
-            ShoppingCart shoppingCartToDelete = null;
-            for (ShoppingCart shoppingCart : listShoppingCart) {
-                if (shoppingCart.getProduct().getId() == json.getInt("id")) {
+            OrderLine shoppingCartToDelete = null;
+            for (OrderLine shoppingCart : listShoppingCart) {
+                if (shoppingCart.getProd().getId() == json.getInt("id")) {
                     shoppingCartToDelete = shoppingCart;
                     existCart = true;
                 }
@@ -126,16 +129,16 @@ public class CartService implements IShoppingCartService {
     }
 
     @Override
-    public JSONObject getCart(IProductDao PD) {
-        List<ShoppingCart> listShoppingCartToDelete = new ArrayList<>();
+    public JSONObject getCart(IProductDAO PD) {
+        List<OrderLine> listShoppingCartToDelete = new ArrayList();
         JSONObject jsonCart = new JSONObject();
 
         try {
             JSONArray arrayProducts = new JSONArray();
             double totalCart = 0d;
 
-            for (ShoppingCart shoppingCart : listShoppingCart) {
-                Product product = shoppingCart.getProduct();
+            for (OrderLine shoppingCart : listShoppingCart) {
+                Product product = shoppingCart.getProd();
                 if(isNotEmpty(PD.findProductById(product.getId()))){
                     JSONObject jsonProduct = convertShoppingCartToJson(shoppingCart, PD);
                     arrayProducts.put(jsonProduct);
@@ -145,7 +148,7 @@ public class CartService implements IShoppingCartService {
                 }
             }
 
-            for (ShoppingCart shoppingCartToDelete : listShoppingCartToDelete) {
+            for (OrderLine shoppingCartToDelete : listShoppingCartToDelete) {
                 listShoppingCart.remove(shoppingCartToDelete);
             }
 
@@ -160,9 +163,9 @@ public class CartService implements IShoppingCartService {
         return jsonCart;
     }
 
-    private JSONObject convertShoppingCartToJson(ShoppingCart shoppingCart, IProductDao PD) throws JSONException {
-        JSONObject jsonproduct = PD.convertProductToJson(shoppingCart.getProduct());
-        double totalProduct = shoppingCart.getQuantity() * shoppingCart.getProduct().getPrice();
+    private JSONObject convertShoppingCartToJson(OrderLine shoppingCart, IProductDAO PD) throws JSONException {
+        JSONObject jsonproduct = PD.convertProductToJson(shoppingCart.getProd());
+        double totalProduct = shoppingCart.getQuantity() * shoppingCart.getProd().getPrice();
         jsonproduct.put("qty", shoppingCart.getQuantity());
         jsonproduct.put("total", convertDoubleToStringWithDixieme(totalProduct));
         jsonproduct.put("totalDouble", totalProduct);
