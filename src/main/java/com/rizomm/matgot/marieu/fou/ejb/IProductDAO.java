@@ -1,16 +1,17 @@
 package com.rizomm.matgot.marieu.fou.ejb;
 
-import com.rizomm.matgot.marieu.fou.model.Product;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
+import com.rizomm.matgot.marieu.fou.model.Product;
 
 import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Mathieu on 17/11/2016.
+ * Created by margotelmadi on 04/01/2017.
  */
-public interface ProductEJBIT {
+public interface IProductDAO {
+
     Product createProduct(Product product);
 
     Product findProductById(int idProduct);
@@ -29,7 +30,7 @@ public interface ProductEJBIT {
 
     Product updateProduct(Product product);
 
-    Map<String, Object> convertJsonToProduct(String jsonString, CategoryEJB CD);
+    Map<String, Object> convertJsonToProduct(String jsonString, ICategoryDao CD);
 
     JSONObject convertProductsToJson(List<Product> products);
 
@@ -41,3 +42,4 @@ public interface ProductEJBIT {
 
     Map<String,Object> convertJsonToProductForDelete(String jsonProduct);
 }
+
