@@ -4,18 +4,20 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html" xml:lang="en" lang="en">
-    <head>
+    <h:head>
         <title>Mathieu &amp; Margot Companny</title>
-    </head>
-    <body>
-        Hello everybody
+        <h:outputStylesheet library="css" name="styles.css"/>
+    </h:head>
+    <h:body>
+        Hello everybody test
 
         <h:dataTable value="#{productEJB.findAllProduct()}" var="user">
             <h:column>
                 <h:outputText value="#{productController.product.name}"></h:outputText>
                 <h:outputText value="#{productController.product.description}"></h:outputText>
                 <h:outputText value="#{productController.product.price}"></h:outputText>
+                <h:commandButton action="#{productController.addToCart()}">Ajouter au pannier</h:commandButton>
             </h:column>
         </h:dataTable>
-    </body>
+    </h:body>
 </html>

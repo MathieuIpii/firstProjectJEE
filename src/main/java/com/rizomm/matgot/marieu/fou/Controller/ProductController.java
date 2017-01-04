@@ -31,7 +31,7 @@ public class ProductController implements Serializable {
         return "homePage.xhtml";
     }
 
-    public String doFindUserById() {
+    public String doFindProductById() {
         Product p = productEJB.findProduct(product.getId());
         /*user.setNom(u.getNom());
         user.setPrenom(u.getPrenom());
