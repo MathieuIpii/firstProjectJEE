@@ -2,6 +2,8 @@ package com.rizomm.matgot.marieu.fou.dao;
 
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
+import com.rizomm.matgot.marieu.fou.model.Category;
+import com.rizomm.matgot.marieu.fou.ejb.ICategoryDAO;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
@@ -21,7 +23,7 @@ import java.util.Map;
 @Stateless
 @Remote
 @Named
-public class CategoryDao implements ICategoryDao, Serializable {
+public class CategoryDAO implements ICategoryDAO, Serializable {
 
     @PersistenceContext(unitName = "projectJ2ee")
     protected EntityManager em;

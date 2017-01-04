@@ -1,6 +1,7 @@
 package com.rizomm.matgot.marieu.fou.Controller;
 
 import com.rizomm.matgot.marieu.fou.dao.CategoryDao;
+import com.rizomm.matgot.marieu.fou.ejb.ICategoryDAO;
 import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
 import com.rizomm.matgot.marieu.fou.model.Category;
 import com.rizomm.matgot.marieu.fou.model.Product;
@@ -20,7 +21,7 @@ import java.util.List;
 public class ProductController implements Serializable {
 
     @EJB
-    private CategoryDao CD;
+    private ICategoryDAO CD;
 
     @EJB
     private IProductDAO PD;

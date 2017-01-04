@@ -2,11 +2,12 @@ package com.rizomm.matgot.marieu.fou.ejb;
 
 import java.util.List;
 import java.util.Map;
+import com.rizomm.matgot.marieu.fou.model.Category;
 
 /**
  * Created by margotelmadi on 04/01/2017.
  */
-public interface ICategoryDao {
+public interface ICategoryDAO {
 
     Category createCategory(Category category);
 
