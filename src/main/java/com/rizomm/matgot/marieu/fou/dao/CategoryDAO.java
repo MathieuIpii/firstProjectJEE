@@ -1,9 +1,9 @@
 package com.rizomm.matgot.marieu.fou.dao;
 
+import com.rizomm.matgot.marieu.fou.ejb.ICategoryDAO;
+import com.rizomm.matgot.marieu.fou.model.Category;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
-import com.rizomm.matgot.marieu.fou.model.Category;
-import com.rizomm.matgot.marieu.fou.ejb.ICategoryDAO;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;

@@ -31,7 +31,7 @@ public interface IProductDAO {
 
     Product updateProduct(Product product);
 
-    public Map<String, Object> convertJsonToProduct(String jsonString);
+    Map<String, Object> convertJsonToProduct(String jsonString);
 
     Map<String, Object> convertJsonToProduct(String jsonString, ICategoryDAO CD);
 

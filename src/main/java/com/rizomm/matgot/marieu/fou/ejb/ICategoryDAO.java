@@ -25,5 +25,4 @@ public interface ICategoryDAO {
 
     Map<String, Object> convertJsonToProduct(String category);
 
-    Map<String, Object> convertJsonToProduct(String category, ICategoryDAO CD);
 }
