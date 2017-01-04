@@ -1,8 +1,6 @@
 package com.rizomm.matgot.marieu.fou.rest;
 
-import com.rizomm.matgot.marieu.fou.ejb.CategoryEJB;
 import com.rizomm.matgot.marieu.fou.ejb.ProductEJB;
-import com.rizomm.matgot.marieu.fou.ejb.ProductEJBIT;
 import com.rizomm.matgot.marieu.fou.helper.Utils;
 import com.rizomm.matgot.marieu.fou.model.Product;
 import org.codehaus.jettison.json.JSONException;
