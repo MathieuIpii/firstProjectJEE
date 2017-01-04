@@ -1,9 +1,6 @@
 package com.rizomm.matgot.marieu.fou.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -16,9 +13,20 @@ import static com.rizomm.matgot.marieu.fou.model.Product.*;
 
 @Entity
 @NamedQuery(name = FIND_ALL, query = "SELECT p FROM Product p")
+@NamedQueries({
+        @NamedQuery(name = FIND_ALL, query = "select p from Product p"),
+        @NamedQuery(name = FIND_ALL_BY_CATEGORY, query = "select p from Product p where p.category.id = :idCategory"),
+        @NamedQuery(name = COUNT_ALL, query = "select count(p) from Product p"),
+        @NamedQuery(name = COUNT_ALL_BY_CATEGORY, query = "select count(p) from Product p where p.category.id = :idCategory"),
+        @NamedQuery(name = DELETE_ALL, query = " delete from Product"),
+})
 public class Product implements Serializable {
 
     public static final String FIND_ALL = "Product.findAllProducts";
+    public static final String COUNT_ALL = "Product.countAllProduct";
+    public static final String COUNT_ALL_BY_CATEGORY = "Product.countAllProductByCategory";
+    public static final String DELETE_ALL = "Product.deleteAllProduct";
+    public static final String FIND_ALL_BY_CATEGORY = "Product.findAllProductByCategory";
     @Id
     @GeneratedValue
     private Long id;
