@@ -19,7 +19,7 @@ import java.util.Map;
 
 import static com.rizomm.matgot.marieu.fou.helper.Utils.*;
 import static com.rizomm.matgot.marieu.fou.model.Product.*;
-import static com.rizomm.matgot.marieu.fou.model.Product.FIND_ALL;
+//import static com.rizomm.matgot.marieu.fou.model.Product.FIND_ALL;
 
 /**
  * Created by margotelmadi on 04/01/2017.
