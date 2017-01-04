@@ -226,7 +226,7 @@ public class ProductDAO implements IProductDAO, Serializable {
             if (json.has("category") && !json.isNull("category")) {
                 Map<String, Object> resultCategory = CD.convertJsonToProduct(json.getString("category"));
 
-                if((boolean) resultCategory.get("ERROR")){
+                if(resultCategory.get("ERROR").toString().length()>0){
                     return resultCategory;
                 }
 

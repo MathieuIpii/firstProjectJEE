@@ -2,7 +2,6 @@ package com.rizomm.matgot.marieu.fou.rest;
 
 import com.rizomm.matgot.marieu.fou.ejb.ICategoryDAO;
 import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
-import com.rizomm.matgot.marieu.fou.ejb.ProductEJB;
 import com.rizomm.matgot.marieu.fou.helper.Utils;
 import com.rizomm.matgot.marieu.fou.model.Product;
 import org.codehaus.jettison.json.JSONException;
@@ -36,7 +35,7 @@ public class ProductRest {
     public Response addProduct(String productString) {
         Map<String, Object> result = PD.convertJsonToProduct(productString, CD);
 
-        if (!(boolean)result.get("ERROR")) {
+        if (result.get("ERROR").toString().length() == 0) {
             Product productResult = (Product) result.get("PRODUCT");
             if (Utils.isNotEmpty(productResult.getId()) && Utils.isNotEmpty(PD.findProductById(productResult.getId()))) {
                 result = Utils.generateMessageError400("Le produit existe déja, utiliser la methode PUT pour le modifier.");
@@ -54,7 +53,7 @@ public class ProductRest {
     public Response updateProduct(String productString) {
         Map<String, Object> result = PD.convertJsonToProduct(productString, CD);
 
-        if (!((boolean) result.get("ERROR"))) {
+        if (result.get("ERROR").toString().length() == 0) {
             Product productResult = (Product) result.get("PRODUCT");
             Product product;
             if (Utils.isNotEmpty(productResult.getId()) && Utils.isNotEmpty(PD.findProductById(productResult.getId()))) {
@@ -73,7 +72,7 @@ public class ProductRest {
     public Response deleteProduct(String jsonProduct) {
         Map<String, Object> result = PD.convertJsonToProductForDelete(jsonProduct);
 
-        if (!((boolean) result.get("ERROR"))) {
+        if (result.get("ERROR").toString().length() == 0) {
             if (PD.deleteProductById((Integer) result.get("idProduct"))) {
                 result = Utils.generateMessageSuccess200("Produit supprimé avec succés.");
             } else {
