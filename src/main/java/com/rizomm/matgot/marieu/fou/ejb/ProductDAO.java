@@ -139,8 +139,30 @@ public class ProductDAO implements IProductDAO, Serializable {
     }
 
     @Override
-    public Map<String, Object> convertJsonToProduct(String jsonString, ICategoryDAO CD) {
-        return null;
+    public Map<String, Object> convertJsonToProduct(String jsonString) {
+        Map<String, Object> result = new HashMap();
+        Product product = new Product();
+
+        try {
+            JSONObject json = new JSONObject(jsonString);
+
+            if(isEmpty(json,"id")){
+                return generateMessageError400("L'id est obligatoire !");
+            }else if(!isInt(json.getString("id"))){
+                return generateMessageError400("L'id doit être un chiffre !");
+            }else if(json.getInt("id") < 0){
+                return generateMessageError400("L'id doit être un chiffre positif !");
+            }
+
+            result.put("ID",json.getInt("id"));
+            result.put("ERROR",false);
+        } catch (JSONException e) {
+            return generateMessageError400("Le format de la requête n'est pas respecté !");
+        }catch (Exception e) {
+            return generateMessageError400("Aie, une erreur est survenue !");
+        }
+
+        return result;
     }
 
     @Override
@@ -195,7 +217,7 @@ public class ProductDAO implements IProductDAO, Serializable {
 
             if(isNotEmpty(json,"id")){
                 if(!isInt(json.getString("id"))){
-                    return generateMessageError400("L'id doit être un chiffre !");
+                    return generateMessageError400("L'id doit être un nombre !");
                 }
                 product.setId(json.getInt("id"));
             }
