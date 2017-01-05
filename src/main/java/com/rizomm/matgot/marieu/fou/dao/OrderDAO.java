@@ -18,9 +18,9 @@ import java.util.List;
 @Stateless
 @Local
 public class OrderDAO implements IOrderDAO {
-
-    @PersistenceContext(unitName = "projectJ2ee")
+/*
+    @PersistenceContext(unitName = "persistence")
     protected EntityManager em;
     protected boolean isNotTest = true;
-
+*/
 }

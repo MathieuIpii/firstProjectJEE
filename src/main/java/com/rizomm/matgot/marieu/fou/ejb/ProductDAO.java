@@ -29,7 +29,7 @@ import static com.rizomm.matgot.marieu.fou.model.Product.FIND_ALL;
 @Named
 public class ProductDAO implements IProductDAO, Serializable {
 
-    @PersistenceContext(unitName = "projectJ2ee")
+    @PersistenceContext(unitName = "persistence")
     protected EntityManager em;
     protected boolean isNotTest = true;
 
