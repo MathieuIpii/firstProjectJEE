@@ -19,7 +19,7 @@ public abstract class AbstractEJBTest{
     // =             Attributes             =
     // ======================================
 
-/*    protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
+    protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
     protected EntityManager em;
     protected EntityTransaction tx;
 
@@ -37,9 +37,4 @@ public abstract class AbstractEJBTest{
     public void closeEntityManager() throws SQLException {
         if (em != null) em.close();
     }
-
-    protected Long getRandomId() {
-            return Math.abs(new Random().nextLong());
-        }
-*/
 }

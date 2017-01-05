@@ -2,17 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="577940f7-af5a-45dd-8b2e-8b583f363171" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/dao/OrderDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/dao/OrderDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/Controller/CartController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/Controller/ProductController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/dao/OrderDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/ejb/ICategoryDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/ejb/IOrderDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/ejb/IProductDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/helper/Utils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Category.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Category_.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Order.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/OrderLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Order_.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Product.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Product_.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/rest/ProductRest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/service/CartService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/classes/com/rizomm/matgot/marieu/fou/service/IShoppingCartService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/faces-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/activation-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/commons-httpclient-3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.0.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/httpclient-4.0.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/httpcore-4.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/jackson-core-asl-1.6.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/jackson-jaxrs-1.6.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/jackson-mapper-asl-1.6.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/jackson-xc-1.6.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/javassist-3.12.1.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/javax.persistence-2.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/jaxrs-api-2.2.1.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/jcip-annotations-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/jsr250-api-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/org.eclipse.persistence.antlr-2.5.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/org.eclipse.persistence.asm-2.5.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/org.eclipse.persistence.core-2.5.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/org.eclipse.persistence.jpa-2.5.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/org.eclipse.persistence.jpa.jpql-2.5.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/org.eclipse.persistence.jpa.modelgen.processor-2.5.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/resteasy-jackson-provider-2.2.1.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/resteasy-jaxrs-2.2.1.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/lib/scannotation-1.0.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/ficheProduit.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/homePage.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/ressources/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/rizomm/matgot/marieu/fou/AbstractEJBTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/rizomm/matgot/marieu/fou/AbstractEJBTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/OrderDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/OrderDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/marieu.fou.iml" afterPath="$PROJECT_DIR$/marieu.fou.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Category_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Category_.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Order_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Order_.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Product_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Product_.java" />
@@ -43,10 +93,12 @@
       <file leaf-file-name="ProductEJBTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="432">
+              <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1090#1091#0" expanded="true" />
+                <element signature="e#1136#1137#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,12 +107,10 @@
       <file leaf-file-name="AbstractEJBTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="417">
+              <caret line="33" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1483621363000" expanded="false" signature="1144:1159" ph=" { " />
-                <marker date="1483621363000" expanded="false" signature="1200:1210" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -86,6 +136,7 @@
         <option value="Class" />
         <option value="XHTML File" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -105,9 +156,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/service/PanierService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Category.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/OrderLine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/service/CartService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/ProductDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/service/CartService.java" />
@@ -118,13 +167,19 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/ressources/css/styles.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/homePage.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/OrderDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/OrderDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java" />
+        <option value="$PROJECT_DIR$/target/surefire-reports/TEST-com.rizomm.matgot.marieu.fou.product.ProductEJBTest.xml" />
+        <option value="$PROJECT_DIR$/target/surefire-reports/com.rizomm.matgot.marieu.fou.product.ProductEJBTest.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Product.java" />
+        <option value="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Order_.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/model/OrderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Order.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       </list>
     </option>
   </component>
@@ -544,16 +599,23 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target/marieu.fou-1.0.0-SNAPSHOT/homePage.xhtml" />
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.rizomm.matgot.marieu.fou.model" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.rizomm.matgot.marieu.fou.dao" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/ressource" />
     </key>
   </component>
-  <component name="RunManager" selected="GlassFish Server.Glassfish">
+  <component name="RunManager" selected="JUnit.ProductEJBTest">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1208,9 +1270,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="firstProjectJEE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="PACKAGE_NAME" value="com.rizomm.matgot.marieu.fou.product" />
       <option name="MAIN_CLASS_NAME" value="com.rizomm.matgot.marieu.fou.product.ProductEJBTest" />
       <option name="METHOD_NAME" value="" />
@@ -1254,7 +1316,7 @@
       <workItem from="1481270032173" duration="707000" />
       <workItem from="1479388021763" duration="11450000" />
       <workItem from="1482330446993" duration="3396000" />
-      <workItem from="1483613205821" duration="3711000" />
+      <workItem from="1483613205821" duration="5809000" />
     </task>
     <servers />
   </component>
@@ -1265,9 +1327,18 @@
     <history-entry file="ProductEJBTest - 2016.12.21 at 15h 32m 49s.xml">
       <configuration name="ProductEJBTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProductEJBTest - 2017.01.05 at 14h 40m 49s.xml">
+      <configuration name="ProductEJBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductEJBTest - 2017.01.05 at 14h 41m 42s.xml">
+      <configuration name="ProductEJBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductEJBTest - 2017.01.05 at 14h 42m 27s.xml">
+      <configuration name="ProductEJBTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17880000" />
+    <option name="totallyTimeSpent" value="19978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1302,9 +1373,10 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2867884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3319012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33727175" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17155068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1387,14 +1459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="70" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1413,14 +1477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/OrderDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1433,22 +1489,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="417">
+          <caret line="33" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1483621363000" expanded="false" signature="1144:1159" ph=" { " />
-            <marker date="1483621363000" expanded="false" signature="1200:1210" ph=" }" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/TEST-com.rizomm.matgot.marieu.fou.product.ProductEJBTest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/com.rizomm.matgot.marieu.fou.product.ProductEJBTest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Order_.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/model/OrderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/marieu_fou_war_exploded/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Category_.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#537#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/marieu_fou_war_exploded/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Order_.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/marieu_fou_war_exploded/WEB-INF/classes/com/rizomm/matgot/marieu/fou/model/Product_.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#947#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="432">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
           </folding>
         </state>
       </provider>

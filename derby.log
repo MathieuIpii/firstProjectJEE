@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Thu Jan 05 14:42:25 CET 2017:
+Amorçage de Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872) : instance a816c00e-0159-6edd-c844-0000068220e0 
+dans le répertoire de base de données memory:/Users/margotelmadi/Documents/Ecole/2016-2017/J2EE/firstProjectJEE/chapitre1DB  avec le chargeur de classe sun.misc.Launcher$AppClassLoader@7852e922
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_65-b17
+user.dir=/Users/margotelmadi/Documents/Ecole/2016-2017/J2EE/firstProjectJEE
+derby.system.home=null
+Chargeur de classe de la base de données démarré - derby.database.classpath=''
