@@ -10,16 +10,13 @@ import javax.persistence.Persistence;
 import java.sql.SQLException;
 import java.util.Random;
 
-/**
- * Created by Mathieu on 17/11/2016.
- */
-public abstract class AbstractEJBTest{
+public abstract class AbstractEJBTest {
 
     // ======================================
     // =             Attributes             =
     // ======================================
 
-    protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
+    protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectJ2ee");
     protected EntityManager em;
     protected EntityTransaction tx;
 
@@ -36,5 +33,9 @@ public abstract class AbstractEJBTest{
     @After
     public void closeEntityManager() throws SQLException {
         if (em != null) em.close();
+    }
+
+    protected Long getRandomId() {
+        return Math.abs(new Random().nextLong());
     }
 }
