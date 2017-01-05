@@ -16,7 +16,7 @@ public abstract class AbstractEJBTest {
     // =             Attributes             =
     // ======================================
 
-    protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectJ2ee");
+    protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
     protected EntityManager em;
     protected EntityTransaction tx;
 

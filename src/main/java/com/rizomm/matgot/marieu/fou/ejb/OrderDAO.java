@@ -1,4 +1,4 @@
-package com.rizomm.matgot.marieu.fou.dao;
+package com.rizomm.matgot.marieu.fou.ejb;
 
 import com.rizomm.matgot.marieu.fou.ejb.IOrderDAO;
 import com.rizomm.matgot.marieu.fou.model.Product;

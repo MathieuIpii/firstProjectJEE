@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="577940f7-af5a-45dd-8b2e-8b583f363171" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/rizomm/matgot/marieu/fou/AbstractEJBTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/model/Product.class" afterPath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/model/Product.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rizomm/matgot/marieu/fou/dao/OrderDAO.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/CategoryDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/OrderDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/OrderDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/ejb/ProductEJBTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/marieu.fou.iml" afterPath="$PROJECT_DIR$/marieu.fou.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Category_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Category_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Order_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Order_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Product_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/rizomm/matgot/marieu/fou/model/Product_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.rizomm.matgot.marieu.fou.product.ProductEJBTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.rizomm.matgot.marieu.fou.product.ProductEJBTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.rizomm.matgot.marieu.fou.product.ProductEJBTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.rizomm.matgot.marieu.fou.product.ProductEJBTest.txt" />
     </list>
     <ignored path="firstProjectJEE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,18 +32,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProductEJBTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProductDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,12 +44,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ProductEJBTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/ejb/ProductEJBTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AbstractEJBTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="18" column="99" selection-start-line="18" selection-start-column="99" selection-end-line="18" selection-end-column="99" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,10 +73,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="XHTML File" />
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -122,9 +117,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/model/Order.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/ProductDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/model/Product.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/ejb/Product.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/ejb/ProductEJBTest.java" />
       </list>
     </option>
   </component>
@@ -279,7 +277,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
+              <option name="myItemId" value="ejb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,40 +296,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="firstProjectJEE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="firstProjectJEE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ressources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,36 +463,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="firstProjectJEE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="firstProjectJEE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fou" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -553,6 +487,9 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.rizomm.matgot.marieu.fou.dao" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.rizomm.matgot.marieu.fou.ejb" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -560,7 +497,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/ressource" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductEJBTest">
+  <component name="RunManager" selected="JUnit.ProductEJBTest (1)">
     <configuration default="false" name="ProductDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -573,6 +510,58 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.rizomm.matgot.marieu.fou.product" />
       <option name="MAIN_CLASS_NAME" value="com.rizomm.matgot.marieu.fou.product.ProductDaoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Product" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rizomm.matgot.marieu.fou.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="marieu.fou" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rizomm.matgot.marieu.fou.model" />
+      <option name="MAIN_CLASS_NAME" value="com.rizomm.matgot.marieu.fou.model.Product" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProductEJBTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rizomm.matgot.marieu.fou.ejb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="marieu.fou" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rizomm.matgot.marieu.fou.ejb" />
+      <option name="MAIN_CLASS_NAME" value="com.rizomm.matgot.marieu.fou.ejb.ProductEJBTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1260,14 +1249,18 @@
       <patterns />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="GlassFish Server.Glassfish" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.ProductEJBTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.ProductDaoTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Product" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ProductEJBTest (1)" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ProductDaoTest" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ProductEJBTest (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Product" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProductDaoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1293,20 +1286,11 @@
       <workItem from="1481270032173" duration="707000" />
       <workItem from="1479388021763" duration="11450000" />
       <workItem from="1482330446993" duration="3396000" />
-      <workItem from="1483613205821" duration="7793000" />
+      <workItem from="1483613205821" duration="8500000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProductEJBTest - 2016.12.21 at 15h 32m 49s.xml">
-      <configuration name="ProductEJBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProductEJBTest - 2017.01.05 at 14h 40m 49s.xml">
-      <configuration name="ProductEJBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProductEJBTest - 2017.01.05 at 14h 41m 42s.xml">
-      <configuration name="ProductEJBTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ProductEJBTest - 2017.01.05 at 14h 42m 27s.xml">
       <configuration name="ProductEJBTest" configurationId="JUnit" />
     </history-entry>
@@ -1328,9 +1312,18 @@
     <history-entry file="ProductEJBTest - 2017.01.05 at 14h 57m 07s.xml">
       <configuration name="ProductEJBTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProductEJBTest_(1) - 2017.01.05 at 15h 33m 55s.xml">
+      <configuration name="ProductEJBTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductEJBTest_(1) - 2017.01.05 at 15h 34m 31s.xml">
+      <configuration name="ProductEJBTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductEJBTest_(1) - 2017.01.05 at 15h 35m 57s.xml">
+      <configuration name="ProductEJBTest (1)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21962000" />
+    <option name="totallyTimeSpent" value="22669000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1345,7 +1338,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1361,11 +1354,11 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957035" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3319012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3319012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33727175" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -1443,7 +1436,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/CategoryDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/CategoryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
@@ -1451,7 +1444,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/dao/OrderDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rizomm/matgot/marieu/fou/ejb/OrderDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
@@ -1547,11 +1540,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="44" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="210">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="99" selection-start-line="18" selection-start-column="99" selection-end-line="18" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1565,18 +1576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/AbstractEJBTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/ejb/ProductEJBTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/rizomm/matgot/marieu/fou/product/ProductEJBTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
