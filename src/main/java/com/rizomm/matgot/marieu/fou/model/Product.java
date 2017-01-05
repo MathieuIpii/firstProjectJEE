@@ -76,7 +76,6 @@ public class Product implements Serializable {
         this.stock = stock;
         this.price = price;
         this.name = name;
-        this.description = description;
         this.urlPicture = urlPicture;
     }
 
