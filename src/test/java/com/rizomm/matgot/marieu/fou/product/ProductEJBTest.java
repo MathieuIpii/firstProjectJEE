@@ -8,6 +8,9 @@ import com.rizomm.matgot.marieu.fou.model.Product;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+
 
 /**
  * Created by Mathieu on 17/11/2016.
@@ -19,13 +22,7 @@ public class ProductEJBTest extends AbstractEJBTest {
 
     @Before
     public void init() {
-        productDao = new ProductDAO();
-        productDao.em = productDao;
-        productDao.isNotTest = false;
 
-        cd = new CategoryDAO();
-        cd.em = em;
-        cd.isNotTest = false;
     }
 
     @Test
@@ -35,6 +32,10 @@ public class ProductEJBTest extends AbstractEJBTest {
 
         Product prod = new Product(cat, 3, 3, "lampe", "belle lampe moderne", "testUrl");
 
+        assertNull("Product should not be found", em.find(Product.class, prod.getId()));
+
+        productDao.createProduct(prod);
+        assertNotNull("Product should not be found", em.find(Product.class, prod.getId()));
 
     }
 
