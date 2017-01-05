@@ -31,18 +31,28 @@ public class ProductEJBTest extends AbstractEJBTest {
     }
 
     @Test
-    public void shouldCreateAFiledProduct() throws Exception {
+    public void shouldCreateFailProduct() throws Exception {
         Category cat = new Category((long) 1, "CatTest");
         Product prod = new Product(cat, 3, 3, "lampe", "belle lampe moderne", "testUrl");
         assertNull("Product should not be found", em.find(Product.class, prod.getId()));
     }
 
     @Test
-    public void shouldCreateAProduct() throws Exception {
+    public void shouldCreateProduct() throws Exception {
         Category cat = new Category((long) 1, "CatTest");
         Product prod = new Product(cat, 3, 3, "lampe", "belle lampe moderne", "testUrl");
         productDAO.createProduct(prod);
         assertNotNull("Product should not be found", em.find(Product.class, prod.getId()));
     }
 
+    @Test
+    public void shouldDeleteProduct() throws Exception {
+        Category cat = new Category((long) 1, "CatTest");
+        Product prod = new Product(cat, 3, 3, "lampe", "belle lampe moderne", "testUrl");
+        productDAO.createProduct(prod);
+        assertNotNull("Product should not be found", em.find(Product.class, prod.getId()));
+        productDAO.deleteProduct(prod);
+        assertNull("Product should not be found", em.find(Product.class, prod.getId()));
+    }
+    
 }
