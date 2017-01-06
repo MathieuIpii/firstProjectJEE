@@ -3,6 +3,9 @@ package com.rizomm.matgot.marieu.fou;
 import org.junit.After;
 import org.junit.Before;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -16,9 +19,7 @@ public abstract class AbstractEJBTest {
     // =             Attributes             =
     // ======================================
 
-    protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
-    protected EntityManager em;
-    protected EntityTransaction tx;
+    protected static Context ctx;
 
     // ======================================
     // =          Lifecycle Methods         =
@@ -26,16 +27,13 @@ public abstract class AbstractEJBTest {
 
     @Before
     public void initEntityManager() throws Exception {
-        em = emf.createEntityManager();
-        tx = em.getTransaction();
+        ctx = new InitialContext();
     }
 
     @After
-    public void closeEntityManager() throws SQLException {
-        if (em != null) em.close();
-    }
-
-    protected Long getRandomId() {
-        return Math.abs(new Random().nextLong());
+    public void closeEntityManager() throws SQLException, NamingException {
+        if (ctx != null) {
+            ctx.close();
+        }
     }
 }
