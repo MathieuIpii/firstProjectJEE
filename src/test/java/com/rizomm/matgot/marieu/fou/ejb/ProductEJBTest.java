@@ -54,5 +54,5 @@ public class ProductEJBTest extends AbstractEJBTest {
         productDAO.deleteProduct(prod);
         assertNull("Product should not be found", em.find(Product.class, prod.getId()));
     }
-    
+
 }
