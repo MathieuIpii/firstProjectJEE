@@ -67,17 +67,6 @@ public class ProductDAO implements IProductDAO, Serializable {
     }
 
     @Override
-    public List<Product> findAllProductByPage(int start, int limit) {
-        TypedQuery<Product> query = em.createNamedQuery(FIND_ALL, Product.class)
-                .setFirstResult(start)
-                .setMaxResults(limit);
-        if (isNotTest) {
-            em.joinTransaction();
-        }
-        return query.getResultList();
-    }
-
-    @Override
     public List<Product> findAllProductByPageAndCategory(int start, int limit, int idCategory) {
         TypedQuery<Product> query = em.createNamedQuery(FIND_ALL_BY_CATEGORY, Product.class)
                 .setFirstResult(start)
@@ -87,26 +76,6 @@ public class ProductDAO implements IProductDAO, Serializable {
             em.joinTransaction();
         }
         return query.getResultList();
-    }
-
-
-    @Override
-    public int countAllProduct() {
-        TypedQuery<Integer> query = em.createNamedQuery(COUNT_ALL, Integer.class);
-        if (isNotTest) {
-            em.joinTransaction();
-        }
-        return ((Number) query.getSingleResult()).intValue();
-    }
-
-    @Override
-    public int countAllProduct(int idCategory) {
-        TypedQuery<Integer> query = em.createNamedQuery(COUNT_ALL_BY_CATEGORY, Integer.class)
-                .setParameter("idCategory", idCategory);
-        if (isNotTest) {
-            em.joinTransaction();
-        }
-        return ((Number) query.getSingleResult()).intValue();
     }
 
     @Override

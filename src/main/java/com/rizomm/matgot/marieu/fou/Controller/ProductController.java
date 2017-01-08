@@ -28,25 +28,7 @@ public class ProductController implements Serializable {
     private Product product = new Product();
     private static final long serialVersionUID = 1L;
 
-    public List<Category> findAllCategory(){
-        return CD.findAllCategory();
-    }
-
-    public double getCountAllProduct() {
-        int countProduct = PD.countAllProduct();
-        return Math.ceil((double) countProduct / 9) ;
-    }
-
-    public void doFindProduct() {
-        product = PD.findProductById(product.getId());
-    }
-
     public Product getProduct() {
         return product;
     }
-
-    public String getPriceDixieme() {
-        return Utils.convertDoubleToStringWithDixieme(product.getPrice());
-    }
-
 }

@@ -14,7 +14,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by steven on 17/11/2016.
+ * Created by marieu on 4/01/2017.
  */
 public class ProductEJBTest extends AbstractEJBTest {
 

@@ -19,10 +19,6 @@ public interface IProductDAO {
 
     List<Product> findAllProduct();
 
-    int countAllProduct();
-
-    int countAllProduct(int idCategory);
-
     void deleteAllProduct();
 
     Boolean deleteProductById(int idProduct);
@@ -38,8 +34,6 @@ public interface IProductDAO {
     JSONObject convertProductsToJson(List<Product> products);
 
     JSONObject convertProductToJson(Product product) throws JSONException;
-
-    List<Product> findAllProductByPage(int start, int limit);
 
     List<Product> findAllProductByPageAndCategory(int start, int limit, int idCategory);
 
