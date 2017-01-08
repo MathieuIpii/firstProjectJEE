@@ -84,7 +84,7 @@ public class ProductRest {
     }
 
     @GET
-    @Path("/")
+    @Path("/addProduct")
     @Produces("application/json")
     public Response getAllProducts() throws JSONException {
         List<Product> listProduct = PD.findAllProduct();

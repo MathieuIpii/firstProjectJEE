@@ -31,4 +31,12 @@ public class ProductController implements Serializable {
     public Product getProduct() {
         return product;
     }
+
+    public List<Product> findAllProduct(){
+        return PD.findAllProduct();
+    }
+
+    public void addToCart(){
+        PD.addToCart(product);
+    }
 }

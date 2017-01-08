@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+.bandeau-header{
+    background-color: lightcoral;
+    color: #fff;
+    margin: 0;
+    padding: 8px;
+}
+.table_product{
+    width: 100%;
+}
+.product{
+    border: 1px solid #eee;
+    display: inline-block;
+    margin: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    width: 350px;
+}
+.product .nom{
+    background-color: lightcoral;
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+.product .img{
+    height: 300px;
+    margin: 0 auto;
+    max-height: 300px;
+    min-height: 300px;
+    width: auto;
+}
+.product .desc{
+    border-top: 1px solid #eeeeee;
+}
+.product .prix{
+    font-weight: bold;
+}
+.product .prix:after{
+    content: "€";
+}
+.product .button{
+    background-color: lightcoral;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}

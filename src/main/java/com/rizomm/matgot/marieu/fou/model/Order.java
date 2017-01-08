@@ -19,4 +19,5 @@ public class Order implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
+
 }
