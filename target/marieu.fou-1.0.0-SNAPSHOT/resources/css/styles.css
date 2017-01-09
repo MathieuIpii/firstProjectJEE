@@ -10,13 +10,15 @@ body{
 .table_product{
     width: 100%;
 }
+.table_product tr{
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+}
 .product{
     border: 1px solid #eee;
-    display: inline-block;
     margin: 2rem;
     text-align: center;
-    vertical-align: middle;
-    width: 350px;
 }
 .product .nom{
     background-color: lightcoral;

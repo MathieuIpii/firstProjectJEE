@@ -46,6 +46,13 @@ public class ProductController implements Serializable {
     }
 /*
     public void createProductTest(){
+
+    D'abord :
+        PD.deleteProduct()  et après refais comme là
+
+        ensuite tu vas dans le product.xhtml et du decommente les boutons en bas
+        Tu déploye et tu clique sur le 2ème bouton
+
         Product product1 = new Product(1, 20, 24.99f, "Petite table basse", "une petite table basse tranquille", "");
         Product product2 = new Product(1, 10, 69.99f, "Table à manger", "une belle table tranquille", "");
         Product product3 = new Product(1, 50, 9.99f, "Dinette", "une petite dinette tranquille", "");
