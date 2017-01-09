@@ -49,6 +49,7 @@ public class ProductController implements Serializable {
 
     //D'abord :
         //PD.deleteProduct();  //et après refais comme là
+        PD.deleteAllProduct();
 
         //ensuite tu vas dans le product.xhtml et du decommente les boutons en bas
         //Tu déploye et tu clique sur le 2ème bouton
