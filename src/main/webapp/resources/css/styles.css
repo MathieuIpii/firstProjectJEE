@@ -51,3 +51,13 @@ body{
     text-align: center;
     width: 100%;
 }
+.product .voirPlus{
+    background-color: lightcoral;
+    border-top: 1px solid #eeeeee;
+    color: #fff;
+    font-size: 20px;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
