@@ -3,7 +3,8 @@
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html" xml:lang="en" lang="en">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough" xml:lang="en" lang="en">
 
     <h:head>
         <title>Mathieu &amp; Margot Companny</title>
@@ -29,12 +30,13 @@
 
         <div class="table_product" >
             <div class="column-product">
-                <div class="product">
+                <div class="product" >
                     <p class="nom" >Test</p>
                     <img class="img" src="resources/img/lampe.jpg" alt="Lampe" />
                     <p class="desc">Une petite description</p>
                     <p class="prix">12,5</p>
-                    <button class="button">Ajouter au panier</button>>
+                    <button class="button">Ajouter au panier</button>
+                    <a href='#{productController.display("ficheProduit")}' class="">Voir plus</a>
                 </div>
                 <div class="product">
                     <p class="nom" >Test</p>

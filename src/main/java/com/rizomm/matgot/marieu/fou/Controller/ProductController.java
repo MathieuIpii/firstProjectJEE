@@ -39,4 +39,8 @@ public class ProductController implements Serializable {
     public void addToCart(){
         PD.addToCart(product);
     }
+
+    public String display(String page){
+        return page+".xhtml";
+    }
 }
