@@ -23,7 +23,7 @@ public class ProductEJBTest extends AbstractEJBTest {
         Object ejb = ctx.lookup("java:global/marieu.fou-1.0.0-SNAPSHOT/ProductDAO");
         assertNotNull(ejb);
 
-        Category cat = new Category((int) 1, "CatTest");
+        Category cat = new Category( 1, "CatTest");
         Product prod = new Product(1, 3, 3, "lampe", "belle lampe moderne", "testUrl");
         IProductDAO product = (IProductDAO) PortableRemoteObject.narrow(ejb, IProductDAO.class);
 
