@@ -44,4 +44,11 @@ public class ProductController implements Serializable {
         product.setId(id);
         return page+".xhtml";
     }
+
+    public void createCat(){
+        Category cat1 = new Category(1, "Table");
+        Category cat2 = new Category(2, "Lampe");
+        CD.createCategory(cat1);
+        CD.createCategory(cat2);
+    }
 }
