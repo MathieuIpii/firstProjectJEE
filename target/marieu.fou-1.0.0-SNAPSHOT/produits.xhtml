@@ -23,7 +23,7 @@
                     <img class="img" src="#{resource['images']}/${product.urlPicture}" alt="" />
                     <h:outputText class="desc" value="#{product.description}"></h:outputText>
                     <h:outputText class="prix" value="#{product.price}"></h:outputText>
-                    <h:commandButton action="#{productController.addToCart}">Ajouter au panier</h:commandButton>
+                    <h:commandButton action="#{productController.addToCart()}">Ajouter au panier</h:commandButton>
                 </div>
             </h:column>
         </h:dataTable>
@@ -70,5 +70,10 @@
                 </div>
             </div>
         </div>
+
+        <h:form>
+            <h:commandButton action="#{productController.createCat()}">Créer Cat</h:commandButton>
+            <h:commandButton action="#{productController.createProductTest()}">Créer Produit</h:commandButton>
+        </h:form>
     </h:body>
 </html>

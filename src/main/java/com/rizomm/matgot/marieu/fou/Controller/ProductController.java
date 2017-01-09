@@ -44,7 +44,7 @@ public class ProductController implements Serializable {
         product.setId(id);
         return page+".xhtml";
     }
-
+/*
     public void createProductTest(){
         Product product1 = new Product(1, 20, 24.99f, "Petite table basse", "une petite table basse tranquille", "");
         Product product2 = new Product(1, 10, 69.99f, "Table à manger", "une belle table tranquille", "");
@@ -52,5 +52,19 @@ public class ProductController implements Serializable {
         Product product4 = new Product(2, 10, 49.99f, "Grande lampe", "une belle lampe de salon posée", "");
         Product product5 = new Product(2, 20, 24.99f, "Petite lampe de chevet", "une petite lampe de chevet posée", "resources/img/lampe.jpg");
         Product product6 = new Product(2, 50, 14.99f, "Spot de soirée", "pour faire une grosse fête ou juste une soirée posée", "");
+
+        PD.createProduct(product1);
+        PD.createProduct(product2);
+        PD.createProduct(product3);
+        PD.createProduct(product4);
+        PD.createProduct(product5);
+        PD.createProduct(product6);
     }
+
+    public void createCat(){
+        Category cat1 = new Category(1, "Table");
+        Category cat2 = new Category(2, "Lampe");
+        CD.createCategory(cat1);
+        CD.createCategory(cat2);
+    }*/
 }
