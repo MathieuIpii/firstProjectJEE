@@ -44,4 +44,13 @@ public class ProductController implements Serializable {
         product.setId(id);
         return page+".xhtml";
     }
+
+    public void createProductTest(){
+        Product product1 = new Product(1, 20, 24.99f, "Petite table basse", "une petite table basse tranquille", "");
+        Product product2 = new Product(1, 10, 69.99f, "Table à manger", "une belle table tranquille", "");
+        Product product3 = new Product(1, 50, 9.99f, "Dinette", "une petite dinette tranquille", "");
+        Product product4 = new Product(2, 10, 49.99f, "Grande lampe", "une belle lampe de salon posée", "");
+        Product product5 = new Product(2, 20, 24.99f, "Petite lampe de chevet", "une petite lampe de chevet posée", "resources/img/lampe.jpg");
+        Product product6 = new Product(2, 50, 14.99f, "Spot de soirée", "pour faire une grosse fête ou juste une soirée posée", "");
+    }
 }
