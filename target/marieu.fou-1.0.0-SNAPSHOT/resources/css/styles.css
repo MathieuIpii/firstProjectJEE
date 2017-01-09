@@ -8,11 +8,19 @@ body{
     padding: 8px;
 }
 .table_product{
+    text-align: center;
     width: 100%;
 }
 .table_product tr{
     display: inline-block;
+    max-width: 350px;
+    min-width: 350px;
     vertical-align: top;
+    width: 350px;
+}
+.table_product td{
+    max-width: 350px;
+    min-width: 350px;
     width: 350px;
 }
 .product{
@@ -23,12 +31,14 @@ body{
 .product .nom{
     background-color: lightcoral;
     color: #fff;
+    display: block;
     font-size: 18px;
     margin: 0;
     padding: 1rem;
     text-align: center;
 }
 .product .img{
+    display: block;
     height: 300px;
     margin: 0 auto;
     max-height: 300px;
@@ -37,8 +47,10 @@ body{
 }
 .product .desc{
     border-top: 1px solid #eeeeee;
+    display: block;
 }
 .product .prix{
+    display: block;
     font-weight: bold;
 }
 .product .prix:after{
@@ -48,8 +60,12 @@ body{
     background-color: lightcoral;
     border: none;
     color: #fff;
+    display: block;
     font-size: 20px;
     padding: 1rem;
     text-align: center;
     width: 100%;
+}
+.product .voirPlus{
+    border-top: 1px solid #eeeeee;
 }
