@@ -102,7 +102,7 @@ public class CategoryDAO implements ICategoryDAO, Serializable {
                     return generateMessageError400("L'id de la catégorie doit être un int.");
                 }
 
-                category.setId((long) Integer.parseInt(idString));
+                category.setId((int) Integer.parseInt(idString));
 
             }else if(isNotEmpty(jsonCategory,"label")){
 

@@ -22,23 +22,23 @@ public class Category implements Serializable{
     public static final String DELETE_ALL = "Category.deleteAllCategory";
     @Id
     @GeneratedValue
-    private Long id;
+    private int id;
     @NotNull
     @Size(min = 1, max = 30, message = "Le label doit être entre 1 and 30")
     private String label;
 
     public Category(){}
 
-    public Category(Long id, String label) {
+    public Category(int id, String label) {
         this.id = id;
         this.label = label;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
