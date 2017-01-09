@@ -111,11 +111,8 @@ public class ProductDAO implements IProductDAO, Serializable {
     @Override
     public Map<String, Object> convertJsonToProduct(String jsonString) {
         Map<String, Object> result = new HashMap();
-        Product product = new Product();
-
         try {
             JSONObject json = new JSONObject(jsonString);
-
             if(isEmpty(json,"id")){
                 return generateMessageError400("L'id est obligatoire");
             }else if(!isInt(json.getString("id"))){
@@ -123,7 +120,6 @@ public class ProductDAO implements IProductDAO, Serializable {
             }else if(json.getInt("id") < 0){
                 return generateMessageError400("L'id doit être un int positif");
             }
-
             result.put("ID",json.getInt("id"));
             result.put("ERROR",false);
         } catch (JSONException e) {
@@ -131,20 +127,15 @@ public class ProductDAO implements IProductDAO, Serializable {
         }catch (Exception e) {
             return generateMessageError400("Une erreur est survenue");
         }
-
         return result;
     }
 
     @Override
     public Map<String, Object> convertJsonToProduct(String jsonString, ICategoryDAO CD) {
-
         Map<String, Object> result = new HashMap();
         Product product = new Product();
-
         try {
             JSONObject json = new JSONObject(jsonString);
-
-
             if(isEmpty(json,"stock")){
                 return generateMessageError400("Le stock est obligatoire");
             }else if(!isInt(json.getString("stock"))){
@@ -152,7 +143,6 @@ public class ProductDAO implements IProductDAO, Serializable {
             }else if(json.getInt("stock") < 0){
                 return generateMessageError400("Le stock doit être un int positif");
             }
-
             if(isEmpty(json,"price")){
                 return generateMessageError400("Le prix est obligatoire");
             }else if(!isDouble(json.getString("price"))){
@@ -162,62 +152,30 @@ public class ProductDAO implements IProductDAO, Serializable {
             }else if(convertDoubleToDixieme(json.getString("price")) < 0){
                 return generateMessageError400("Le prix doit être un double positif");
             }
-
             if(isEmpty(json,"name")){
                 return generateMessageError400("Le nom est obligatoire");
             }else if(isTooLarge(json,"name",255)){
                 return generateMessageError400("Le nom est trop long");
             }
-
             if(isEmpty(json,"urlPicture")){
                 return generateMessageError400("L'image est obligatoire");
             }else if(isTooLarge(json,"urlPicture",255)){
                 return generateMessageError400("L'url de l'image est trop longue");
             }
-
             if(isEmpty(json,"description")){
                 return generateMessageError400("La description est obligatoire");
             }
-
             product.setStock(json.getInt("stock"));
             product.setPrice(convertDoubleToDixieme(json.getString("price")));
             product.setName(json.getString("name"));
             product.setUrlPicture(json.getString("urlPicture"));
             product.setDescription(json.getString("description"));
-
             if(isNotEmpty(json,"id")){
                 if(!isInt(json.getString("id"))){
                     return generateMessageError400("L'id doit être un int");
                 }
                 product.setId(json.getInt("id"));
             }
-
-
-            if (json.has("category") && !json.isNull("category")) {
-                Map<String, Object> resultCategory = CD.convertJsonToProduct(json.getString("category"));
-
-                if(resultCategory.get("ERROR").toString().length()>0){
-                    return resultCategory;
-                }
-
-                Category category = (Category) resultCategory.get("CATEGORY");
-
-                if(category.getId() == 0){
-                    category.setId(CD.createCategory(category).getId());
-                }else{
-                    Long idCategory = category.getId();
-                    category = CD.findCategoryById(idCategory);
-                    if(category == null){
-                        return generateMessageError400("La catégorie avec l'id : " + idCategory + " n'a pas été trouvé");
-                    }
-                }
-
-                product.setCategory(category);
-
-            }else{
-                return generateMessageError400("La catégorie est obligatoire");
-            }
-
             result.put("PRODUCT",product);
             result.put("ERROR",false);
         } catch (JSONException e) {
@@ -225,7 +183,6 @@ public class ProductDAO implements IProductDAO, Serializable {
         }catch (Exception e) {
             return generateMessageError400("Une erreur est survenue");
         }
-
         return result;
     }
 
@@ -233,10 +190,8 @@ public class ProductDAO implements IProductDAO, Serializable {
     public Map<String, Object> convertJsonToProductForDelete(String jsonString) {
         Map<String, Object> result = new HashMap();
         Product product = new Product();
-
         try {
             JSONObject json = new JSONObject(jsonString);
-
             if(isEmpty(json,"id")){
                 return generateMessageError400("L'id est obligatoire");
             }else if(!isInt(json.getString("id"))){
@@ -244,7 +199,6 @@ public class ProductDAO implements IProductDAO, Serializable {
             }else if(json.getInt("id") < 0){
                 return generateMessageError400("L'id doit être un int positif");
             }
-
             result.put("ID",json.getInt("id"));
             result.put("ERROR",false);
         } catch (JSONException e) {
@@ -252,14 +206,12 @@ public class ProductDAO implements IProductDAO, Serializable {
         }catch (Exception e) {
             return generateMessageError400("Une erreur est survenue");
         }
-
         return result;
     }
 
     @Override
     public JSONObject convertProductsToJson(List<Product> products) {
         JSONObject jsonProducts = new JSONObject();
-
         try {
             JSONArray jsonArray = new JSONArray();
             for(Product product : products){
@@ -277,9 +229,7 @@ public class ProductDAO implements IProductDAO, Serializable {
     public JSONObject convertProductToJson(Product product) throws JSONException {
         JSONObject jsonproduct = new JSONObject();
         jsonproduct.put("id", product.getId());
-        jsonproduct.put("description", product.getShortDescription());
-        jsonproduct.put("idCategory", product.getCategory().getId());
-        jsonproduct.put("labelCategory", product.getCategory().getLabel());
+        jsonproduct.put("description", product.getDescription());
         jsonproduct.put("name", product.getName());
         jsonproduct.put("price", convertDoubleToStringWithDixieme(product.getPrice()));
         jsonproduct.put("stock", product.getStock());

@@ -33,7 +33,7 @@ public class ProductRest {
     @POST
     @Produces("application/json")
     public Response addProduct(String productString) {
-        Map<String, Object> result = PD.convertJsonToProduct(productString, CD);
+        Map<String, Object> result = PD.convertJsonToProduct(productString);
 
         if (result.get("ERROR").toString().length() == 0) {
             Product productResult = (Product) result.get("PRODUCT");
@@ -83,7 +83,7 @@ public class ProductRest {
         return Response.status((Integer) result.get("CODE_HTTP")).entity(result.get("MESSAGE_HTTP")).build();
     }
 
-    @GET
+    @POST
     @Path("/addProduct")
     @Produces("application/json")
     public Response getAllProducts() throws JSONException {

@@ -62,6 +62,15 @@ public class Product implements Serializable {
         this.urlPicture = urlPicture;
     }
 
+    public Product(int id, int stock, float price, String name, String description, String urlPicture) {
+        this.id = id;
+        this.stock = stock;
+        this.price = price;
+        this.name = name;
+        this.description = description;
+        this.urlPicture = urlPicture;
+    }
+
     public Product(Category category, int stock, float price, String name, String description, String urlPicture) {
         this.category = category;
         this.stock = stock;
@@ -133,13 +142,5 @@ public class Product implements Serializable {
 
     public void setUrlPicture(String urlPicture) {
         this.urlPicture = urlPicture;
-    }
-
-    public String getShortDescription() {
-        if(this.description.length() <= 103){
-            return description;
-        }else{
-            return description.substring(0,100) + "...";
-        }
     }
 }
