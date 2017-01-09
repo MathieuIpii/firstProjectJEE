@@ -5,12 +5,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<head>
-    <title>Fiche Produit</title>
-</head>
-<body>
-Ficheproduit
 
-<h:outputText value="#{productController.product.id}"></h:outputText>
-</body>
+    <h:head>
+        <title>Mathieu &amp; Margot Companny</title>
+        <link type="text/css" rel="stylesheet"
+              href="/marieu.fou-1.0.0-SNAPSHOT/resources/css/styles.css" />
+    </h:head>
+
+<h:body>
+    <div class="bandeau-header">
+        <h1>Marieu Company</h1>
+    </div>
+    <h:dataTable class="table_product" value="#{productController.getProduct()}" var="product">
+        <h:column class="column-product">
+        <div class="product">
+            <h:outputText class="nom" value="#{product.name}"></h:outputText>
+            <img class="img" src="#{resource['images']}/${product.urlPicture}" alt="" />
+            <h:outputText class="desc" value="#{product.description}"></h:outputText>
+            <h:outputText class="prix" value="#{product.price}"></h:outputText>
+            <button class="button">Ajouter au panier</button>
+        </div>
+        </h:column>
+    </h:dataTable>
+</h:body>
 </html>
