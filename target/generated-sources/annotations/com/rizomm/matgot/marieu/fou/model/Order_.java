@@ -4,7 +4,7 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2017-01-09T14:59:28")
+@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2017-01-09T15:08:04")
 @StaticMetamodel(Order.class)
 public class Order_ { 
 

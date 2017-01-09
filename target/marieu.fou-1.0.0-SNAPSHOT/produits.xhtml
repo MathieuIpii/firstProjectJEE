@@ -19,15 +19,20 @@
         <h:dataTable class="table_product" value="#{productController.findAllProduct()}" var="product">
             <h:column class="column-product">
                 <div class="product">
-                    <h:form>
-                        <h:outputText class="nom" value="#{product.name}"></h:outputText>
-                        <img class="img" src="#{resource['images']}/${product.urlPicture}" alt="" />
-                        <h:outputText class="desc" value="#{product.description}"></h:outputText>
-                        <h:outputText class="prix" value="#{product.price}"></h:outputText>
-                        <h:commandButton action="#{productController.addToCart()}">Ajouter au panier</h:commandButton>
-                    </h:form>
+                    <h:outputText class="nom" value="#{product.name}"></h:outputText>
+                    <img class="img" src="#{resource['images']}/${product.urlPicture}" alt="" />
+                    <h:outputText class="desc" value="#{product.description}"></h:outputText>
+                    <h:outputText class="prix" value="#{product.price}"></h:outputText>
+                    <h:commandButton action="#{productController.addToCart()}">Ajouter au panier</h:commandButton>
                 </div>
             </h:column>
         </h:dataTable>
+
+
+        <h:form>
+            <h:commandButton action="#{productController.createCat()}">Créer Cat</h:commandButton>
+            <h:commandButton action="#{productController.createProductTest()}">Créer Produit</h:commandButton>
+        </h:form>
+
     </h:body>
 </html>
