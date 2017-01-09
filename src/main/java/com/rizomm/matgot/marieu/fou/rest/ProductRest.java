@@ -41,7 +41,7 @@ public class ProductRest {
                 result = Utils.generateMessageError400("Ce produit existe déja.");
             } else {
                 Product product = PD.createProduct(productResult);
-                result = Utils.generateMessageSuccess201("Le produit a été créé avec l'id : " + product.getId() + " et avec la catégorie : " + product.getCategory().getId());
+                result = Utils.generateMessageSuccess201("Le produit a été créé avec l'id : " + product.getId() + " et avec la catégorie : " + product.getidCat());
             }
         }
 

@@ -34,9 +34,7 @@ public class Product implements Serializable {
     //@ManyToOne
     //@JoinColumn(name = "category_fk", nullable = false)
     //private Category category;
-    @ManyToOne
-    @JoinColumn(name = "category_fk", nullable = false)
-    private Long idCat;
+    private int idCat;
     @NotNull(message = "Le stock ne peut pas être nul")
     @Min(value = 0, message = "Le stock ne peut pas être négatif")
     private int stock;
@@ -55,7 +53,7 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public Product(int id, Long idCat, int stock, float price, String name, String description, String urlPicture) {
+    public Product(int id, int idCat, int stock, float price, String name, String description, String urlPicture) {
         this.id = id;
         this.idCat = idCat;
         this.stock = stock;
@@ -65,34 +63,12 @@ public class Product implements Serializable {
         this.urlPicture = urlPicture;
     }
 
-<<<<<<< HEAD
-    public Product(Long idCat, int stock, float price, String name, String description, String urlPicture) {
-        this.idCat = idCat;
-=======
-    public Product(int id, int stock, float price, String name, String description, String urlPicture) {
-        this.id = id;
-        this.stock = stock;
-        this.price = price;
-        this.name = name;
-        this.description = description;
-        this.urlPicture = urlPicture;
-    }
-
-    public Product(Category category, int stock, float price, String name, String description, String urlPicture) {
-        this.category = category;
->>>>>>> origin/master
-        this.stock = stock;
-        this.price = price;
-        this.name = name;
-        this.description = description;
-        this.urlPicture = urlPicture;
-    }
-
-    public Product(Long idCat, int stock, float price, String name, String urlPicture) {
+    public Product(int idCat, int stock, float price, String name, String description, String urlPicture) {
         this.idCat = idCat;
         this.stock = stock;
         this.price = price;
         this.name = name;
+        this.description = description;
         this.urlPicture = urlPicture;
     }
 
@@ -104,11 +80,11 @@ public class Product implements Serializable {
         this.id = id;
     }
 
-    public Long getidCat() {
+    public int getidCat() {
         return idCat;
     }
 
-    public void setCategory(Long idCat) {
+    public void setCategory(int idCat) {
         this.idCat = idCat;
     }
 

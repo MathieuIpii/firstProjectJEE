@@ -24,7 +24,7 @@ public class ProductEJBTest extends AbstractEJBTest {
         assertNotNull(ejb);
 
         Category cat = new Category((long) 1, "CatTest");
-        Product prod = new Product(cat, 3, 3, "lampe", "belle lampe moderne", "testUrl");
+        Product prod = new Product(1, 3, 3, "lampe", "belle lampe moderne", "testUrl");
         IProductDAO product = (IProductDAO) PortableRemoteObject.narrow(ejb, IProductDAO.class);
 
         assertNull("Product should not be found", product.findProductById(prod.getId()));
