@@ -23,15 +23,15 @@
                     <img class="img" src="resources/img/${product.urlPicture}" alt="" />
                     <h:outputText class="desc" value="#{product.description}"></h:outputText>
                     <h:outputText class="prix" value="#{product.price}"></h:outputText>
-                    <h:commandButton action="#{productController.addToCart()}">Ajouter au panier</h:commandButton>
+                    <button class="button">Ajouter au panier</button>
+                    <button class="button voirPlus">Voir plus</button>
                 </div>
             </h:column>
         </h:dataTable>
 
 
         <h:form>
-            <h:commandButton action="#{productController.createCat()}">Créer Cat</h:commandButton>
-            <h:commandButton action="#{productController.createProductTest()}">Créer Produit</h:commandButton>
+            <h:commandButton action="#{productController.createProductTest()}" class="button" value="Voir tous les produits"></h:commandButton>
         </h:form>
 
     </h:body>
