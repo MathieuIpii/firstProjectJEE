@@ -54,12 +54,12 @@ public class ProductController implements Serializable {
         //ensuite tu vas dans le product.xhtml et du decommente les boutons en bas
         //Tu déploye et tu clique sur le 2ème bouton
 
-        Product product1 = new Product(1, 20, 24.99f, "Petite table basse", "une petite table basse tranquille", "resources/img/table-haute.jpg");
-        Product product2 = new Product(1, 10, 69.99f, "Table à manger", "une belle table tranquille", "resources/img/table-haute.jpg");
-        Product product3 = new Product(1, 50, 9.99f, "Dinette", "une petite dinette tranquille", "resources/img/dinette.jpg");
-        Product product4 = new Product(2, 10, 49.99f, "Grande lampe", "une belle lampe de salon posée", "resources/img/lampe-salon.jpg");
-        Product product5 = new Product(2, 20, 24.99f, "Petite lampe de chevet", "une petite lampe de chevet posée", "resources/img/lampe.jpg");
-        Product product6 = new Product(2, 50, 14.99f, "Spot de soirée", "pour faire une grosse fête ou juste une soirée posée", "resources/img/spot.jpg");
+        Product product1 = new Product(1, 20, 24.99f, "Petite table basse", "une petite table basse tranquille", "table-haute.jpg");
+        Product product2 = new Product(1, 10, 69.99f, "Table à manger", "une belle table tranquille", "table-haute.jpg");
+        Product product3 = new Product(1, 50, 9.99f, "Dinette", "une petite dinette tranquille", "dinette.jpg");
+        Product product4 = new Product(2, 10, 49.99f, "Grande lampe", "une belle lampe de salon posée", "lampe-salon.jpg");
+        Product product5 = new Product(2, 20, 24.99f, "Petite lampe de chevet", "une petite lampe de chevet posée", "lampe.jpg");
+        Product product6 = new Product(2, 50, 14.99f, "Spot de soirée", "pour faire une grosse fête ou juste une soirée posée", "spot.jpg");
 
         PD.createProduct(product1);
         PD.createProduct(product2);
