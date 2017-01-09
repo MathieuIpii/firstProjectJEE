@@ -24,7 +24,9 @@
                     <h:outputText class="desc" value="#{product.description}"></h:outputText>
                     <h:outputText class="prix" value="#{product.price}"></h:outputText>
                     <button class="button">Ajouter au panier</button>
-                    <button class="button voirPlus">Voir plus</button>
+                    <h:form>
+                        <h:commandButton class="button voirPlus" value="Voir plus" action="#{productController.display('ficheProduit', product.id)}"></h:commandButton>
+                    </h:form>
                 </div>
             </h:column>
         </h:dataTable>
