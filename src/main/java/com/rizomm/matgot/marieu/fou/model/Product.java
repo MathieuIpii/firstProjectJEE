@@ -18,7 +18,7 @@ import static com.rizomm.matgot.marieu.fou.model.Product.*;
         @NamedQuery(name = FIND_ALL_BY_CATEGORY, query = "select c from Product c where c.idCat = :idCategory order by c.id asc"),
         @NamedQuery(name = COUNT_ALL, query = "select count(c) from Product c"),
         @NamedQuery(name = COUNT_ALL_BY_CATEGORY, query = "select count(c) from Product c where c.idCat = :idCategory"),
-        @NamedQuery(name = DELETE_ALL, query = " delete from Product"),
+        @NamedQuery(name = DELETE_ALL, query = " delete from Product")
 })
 public class Product implements Serializable {
 

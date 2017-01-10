@@ -14,5 +14,7 @@ public interface IOrderDAO {
 
     Order createOrder(Order order);
 
-    List<Order> findAllCommande();
+    List<Order> findAllOrder();
+
+    void deleteAllOrder();
 }

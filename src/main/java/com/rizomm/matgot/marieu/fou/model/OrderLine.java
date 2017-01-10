@@ -1,17 +1,25 @@
 package com.rizomm.matgot.marieu.fou.model;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * Created by Mathieu on 17/11/2016.
  */
 
-public class OrderLine {
+@IdClass(OrderLine.class)
+@Entity
+public class OrderLine implements Serializable {
 
+    @Id
     private int idCommande;
+    @Id
     private int idProduit;
+
     private int quantite;
+
+    public OrderLine(){}
 
     public OrderLine (int idCommande, int idProduit, int quantite){
         this.idCommande = idCommande;
