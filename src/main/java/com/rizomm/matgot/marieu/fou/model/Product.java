@@ -57,7 +57,7 @@ public class Product implements Serializable {
         this.id = id;
         this.idCat = idCat;
         this.stock = stock;
-        this.price = price;
+        this.price = Math.round(price*100)/100;
         this.name = name;
         this.description = description;
         this.urlPicture = urlPicture;
@@ -66,7 +66,7 @@ public class Product implements Serializable {
     public Product(int idCat, int stock, float price, String name, String description, String urlPicture) {
         this.idCat = idCat;
         this.stock = stock;
-        this.price = price;
+        this.price = Math.round(price*100)/100;
         this.name = name;
         this.description = description;
         this.urlPicture = urlPicture;
@@ -97,11 +97,11 @@ public class Product implements Serializable {
     }
 
     public double getPrice() {
-        return price;
+        return Math.round(price*100)/100;
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        this.price = Math.round(price*100)/100;
     }
 
     public String getName() {

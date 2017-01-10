@@ -23,12 +23,12 @@ body{
     min-width: 350px;
     width: 350px;
 }
-.product{
+.product, .fiche{
     border: 1px solid #eee;
     margin: 2rem;
     text-align: center;
 }
-.product .nom{
+.product .nom, .fiche .nom{
     background-color: lightcoral;
     color: #fff;
     display: block;
@@ -37,7 +37,7 @@ body{
     padding: 1rem;
     text-align: center;
 }
-.product .img{
+.product .img, .fiche .img{
     display: block;
     height: 300px;
     margin: 0 auto;
@@ -45,18 +45,18 @@ body{
     min-height: 300px;
     width: auto;
 }
-.product .desc{
+.product .desc, .fiche .desc{
     border-top: 1px solid #eeeeee;
     display: block;
 }
-.product .prix{
+.product .prix, .fiche .prix{
     display: block;
     font-weight: bold;
 }
-.product .prix:after{
+.product .prix:after, .fiche .prix:after{
     content: "€";
 }
-.product .button{
+.product .button, .fiche .button{
     background-color: lightcoral;
     border: none;
     color: #fff;
@@ -68,4 +68,9 @@ body{
 }
 .product .voirPlus{
     border-top: 1px solid #eeeeee;
+}
+.fiche{
+    margin: 2rem auto;
+    text-align: center;
+    width: 40%;
 }

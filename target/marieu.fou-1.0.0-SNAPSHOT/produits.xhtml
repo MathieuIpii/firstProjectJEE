@@ -20,7 +20,7 @@
             <h:column class="column-product">
                 <div class="product">
                     <h:outputText class="nom" value="#{product.name}"></h:outputText>
-                    <img class="img" src="#{resource['images']}/${product.urlPicture}" alt="" />
+                    <img class="img" src="resources/img/${product.urlPicture}" alt="" />
                     <h:outputText class="desc" value="#{product.description}"></h:outputText>
                     <h:outputText class="prix" value="#{product.price}"></h:outputText>
                     <button class="button">Ajouter au panier</button>
