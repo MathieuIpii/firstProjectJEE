@@ -20,7 +20,9 @@
             <h:column class="column-product">
                 <div class="product">
                     <h:outputText class="nom" value="#{product.name}"></h:outputText>
-                    <img class="img" src="resources/img/${product.urlPicture}" alt="" />
+                    <div class="content-img">
+                        <img class="img" src="resources/img/${product.urlPicture}" alt="" />
+                    </div>
                     <h:outputText class="desc" value="#{product.description}"></h:outputText>
                     <h:outputText class="prix" value="#{product.price}"></h:outputText>
                     <h:form>

@@ -39,10 +39,18 @@ body{
 }
 .product .img, .fiche .img{
     display: block;
-    margin: 0 auto;
-    max-width: 486px;
-    min-width: 486px;
-    width: 486px;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+.content-img{
+    height: 400px;
+    max-height: 400px;
+    min-height: 400px;
+    overflow: hidden;
+    width: 100%;
 }
 .product .desc, .fiche .desc{
     border-top: 1px solid #eeeeee;
