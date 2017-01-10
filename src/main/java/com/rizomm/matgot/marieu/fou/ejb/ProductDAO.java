@@ -41,6 +41,7 @@ public class ProductDAO implements IProductDAO, Serializable {
             em.persist(product);
             if(isNotTest){
                 em.flush();
+                //em.getTransaction().commit();
             }
             return product;
         }

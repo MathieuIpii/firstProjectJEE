@@ -56,7 +56,7 @@ body{
 .product .prix:after, .fiche .prix:after{
     content: "€";
 }
-.product .button, .fiche .button{
+.product .button, .fiche .button, .formulaireCreateProd .button{
     background-color: lightcoral;
     border: none;
     color: #fff;
@@ -73,4 +73,14 @@ body{
     margin: 2rem auto;
     text-align: center;
     width: 40%;
+}
+.formulaireCreateProd{
+    text-align: center;
+}
+.formulaireCreateProd .button{
+    margin: 3rem auto;
+    width: 35%;
+}
+.intro{
+    text-align: center;
 }

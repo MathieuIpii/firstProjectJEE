@@ -31,9 +31,6 @@ public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    //@ManyToOne
-    //@JoinColumn(name = "category_fk", nullable = false)
-    //private Category category;
     private int idCat;
     @NotNull(message = "Le stock ne peut pas être nul")
     @Min(value = 0, message = "Le stock ne peut pas être négatif")

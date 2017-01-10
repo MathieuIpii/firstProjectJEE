@@ -39,11 +39,10 @@ body{
 }
 .product .img, .fiche .img{
     display: block;
-    height: 300px;
     margin: 0 auto;
-    max-height: 300px;
-    min-height: 300px;
-    width: auto;
+    max-width: 486px;
+    min-width: 486px;
+    width: 486px;
 }
 .product .desc, .fiche .desc{
     border-top: 1px solid #eeeeee;
@@ -56,7 +55,7 @@ body{
 .product .prix:after, .fiche .prix:after{
     content: "€";
 }
-.product .button, .fiche .button{
+.product .button, .fiche .button, .formulaireCreateProd .button{
     background-color: lightcoral;
     border: none;
     color: #fff;
@@ -73,4 +72,14 @@ body{
     margin: 2rem auto;
     text-align: center;
     width: 40%;
+}
+.formulaireCreateProd{
+    text-align: center;
+}
+.formulaireCreateProd .button{
+    margin: 3rem auto;
+    width: 35%;
+}
+.intro{
+    text-align: center;
 }

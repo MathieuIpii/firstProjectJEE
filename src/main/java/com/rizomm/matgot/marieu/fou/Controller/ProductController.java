@@ -46,11 +46,11 @@ public class ProductController implements Serializable {
         return page+".xhtml";
     }
 
-    public void createProductTest(){
+    public String createProductTest(){
         PD.deleteAllProduct();
         createCat();
 
-        Product product1 = new Product(1, 20, 24.99f, "Petite table basse", "une petite table basse tranquille", "table-haute.jpg");
+        Product product1 = new Product(1, 20, 24.99f, "Petite table basse", "une petite table basse tranquille", "table-basse.jpg");
         Product product2 = new Product(1, 10, 69.99f, "Table à manger", "une belle table tranquille", "table-haute.jpg");
         Product product3 = new Product(1, 50, 9.99f, "Dinette", "une petite dinette tranquille", "dinette.jpg");
         Product product4 = new Product(2, 10, 49.99f, "Grande lampe", "une belle lampe de salon posée", "lampe-salon.jpg");
@@ -63,6 +63,7 @@ public class ProductController implements Serializable {
         PD.createProduct(product4);
         PD.createProduct(product5);
         PD.createProduct(product6);
+        return "produits.xhtml";
     }
 
     public void createCat(){
