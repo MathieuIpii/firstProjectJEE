@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough" xml:lang="en" lang="en">
+
+<h:head>
+    <title>Mathieu &amp; Margot Companny</title>
+    <link type="text/css" rel="stylesheet"
+          href="/marieu.fou-1.0.0-SNAPSHOT/resources/css/styles.css" />
+</h:head>
+
+<h:body>
+    <div class="bandeau-header">
+        <h1>Marieu Company</h1>
+    </div>
+
+    <p class="intro">Marieu Company vous propose des produits simples et uniques accessibles à tous.</p>
+
+    <h:form class="formulaireCreateProd">
+        <h:commandButton action="#{productController.createProductTest()}" class="button" value="Voir tous les produits"></h:commandButton>
+    </h:form>
+
+</h:body>
+</html>
