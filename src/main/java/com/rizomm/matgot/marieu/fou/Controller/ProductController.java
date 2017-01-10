@@ -36,8 +36,8 @@ public class ProductController implements Serializable {
         return PD.findAllProduct();
     }
 
-    public void addToCart(Product prod){
-        PD.addToCart(prod);
+    public void addToCart(int idProd){
+        PD.addToCart(idProd);
     }
 
     public String display(String page, int id){

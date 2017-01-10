@@ -4,10 +4,12 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2017-01-10T08:48:45")
+@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2017-01-10T09:23:32")
 @StaticMetamodel(Order.class)
 public class Order_ { 
 
-    public static volatile SingularAttribute<Order, Long> id;
+    public static volatile SingularAttribute<Order, Integer> quantity;
+    public static volatile SingularAttribute<Order, Integer> idProd;
+    public static volatile SingularAttribute<Order, Integer> id;
 
 }

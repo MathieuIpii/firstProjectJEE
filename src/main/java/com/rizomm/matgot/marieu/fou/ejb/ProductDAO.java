@@ -239,8 +239,8 @@ public class ProductDAO implements IProductDAO, Serializable {
     }
 
     @Override
-    public void addToCart(Product product){
-        Order order = new Order(product,1);
+    public void addToCart(int idProduct){
+        Order order = new Order(idProduct,1);
         em.persist(order);
     }
 }

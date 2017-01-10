@@ -7,5 +7,5 @@ import com.rizomm.matgot.marieu.fou.model.Product;
  */
 public interface IOrderDAO {
 
-    Product addProductToOrder(Product product, int quantite);
+    void addProductToOrder(int idProduct, int quantite);
 }

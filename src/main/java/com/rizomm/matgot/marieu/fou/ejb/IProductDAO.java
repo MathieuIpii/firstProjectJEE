@@ -39,6 +39,6 @@ public interface IProductDAO {
 
     Map<String,Object> convertJsonToProductForDelete(String jsonProduct);
 
-    void addToCart(Product product);
+    void addToCart(int idProduct);
 }
 

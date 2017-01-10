@@ -31,6 +31,26 @@ public class CartService implements IShoppingCartService {
 
     @Override
     public Map<String, Object> addProductCart(String jsonString, IProductDAO PD) {
+        return null;
+    }
+
+    @Override
+    public Map<String, Object> deleteProductToCart(String jsonString) {
+        return null;
+    }
+
+    @Override
+    public JSONObject getCart(IProductDAO PD) {
+        return null;
+    }
+
+    @Override
+    public boolean payer() {
+        return false;
+    }
+/*
+    @Override
+    public Map<String, Object> addProductCart(String jsonString, IProductDAO PD) {
         Map<String, Object> result = new HashMap();
         int newQty = 1;
         try {
@@ -180,4 +200,5 @@ public class CartService implements IShoppingCartService {
 
         return false;
     }
+    */
 }

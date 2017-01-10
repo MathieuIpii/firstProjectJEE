@@ -28,8 +28,7 @@ public class OrderDAO implements IOrderDAO {
 
     @Override
     public void addProductToOrder(int idProduct, int quantite) {
-        em.persist();
+        em.persist(idProduct);
         em.flush();
     }
-
 }
