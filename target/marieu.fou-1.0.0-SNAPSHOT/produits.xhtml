@@ -15,6 +15,11 @@
     <h:body>
         <div class="bandeau-header">
             <h1>Marieu Company</h1>
+            <div>
+                <a href="">
+                    Nombre d'article dans votre panier(<h:outputText value="#{cartController.getNbProduitInCart()}"></h:outputText>)
+                </a>
+            </div>
         </div>
         <h:dataTable class="table_product" value="#{productController.findAllProduct()}" var="product">
             <h:column class="column-product">

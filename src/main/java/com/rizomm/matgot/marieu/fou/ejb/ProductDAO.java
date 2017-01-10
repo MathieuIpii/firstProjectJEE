@@ -238,10 +238,4 @@ public class ProductDAO implements IProductDAO, Serializable {
         jsonproduct.put("urlPicture", product.getUrlPicture());
         return jsonproduct;
     }
-
-    @Override
-    public void addToCart(int idProduct){
-        Order order = new Order(idProduct,1);
-        em.persist(order);
-    }
 }

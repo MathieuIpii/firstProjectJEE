@@ -1,6 +1,8 @@
 package com.rizomm.matgot.marieu.fou.ejb;
 
 import com.rizomm.matgot.marieu.fou.ejb.IOrderDAO;
+import com.rizomm.matgot.marieu.fou.model.Order;
+import com.rizomm.matgot.marieu.fou.model.OrderLine;
 import com.rizomm.matgot.marieu.fou.model.Product;
 
 import javax.ejb.Local;
@@ -10,9 +12,11 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.io.Serializable;
 import java.util.List;
 
 import static com.rizomm.matgot.marieu.fou.helper.Utils.isNotEmpty;
+import static com.rizomm.matgot.marieu.fou.model.Product.FIND_ALL;
 
 /**
  * Created by Mathieu on 17/11/2016.
@@ -21,14 +25,38 @@ import static com.rizomm.matgot.marieu.fou.helper.Utils.isNotEmpty;
 @Stateless
 @Remote
 @Named
-public class OrderDAO implements IOrderDAO {
+public class OrderDAO implements IOrderDAO, Serializable {
 
     @PersistenceContext(unitName = "persistence")
     protected EntityManager em;
 
+    public int getNbProduit(){
+        int qute = 0;
+        List<Order> listeOrder = findAllCommande();
+        if(listeOrder!= null) {
+            OrderLine ol = null;
+            for (int i = 0; i < listeOrder.size(); i++) {
+                ol = em.find(OrderLine.class, listeOrder.get(i));
+                qute += ol.getQuantite();
+            }
+            if (ol != null) {
+                return qute;
+            }
+        }
+        return 0;
+    }
+
     @Override
-    public void addProductToOrder(int idProduct, int quantite) {
-        em.persist(idProduct);
-        em.flush();
+    public List<Order> findAllCommande() {
+        TypedQuery<Order> query = em.createNamedQuery(FIND_ALL, Order.class);
+        em.joinTransaction();
+        return query.getResultList();
+    }
+
+    @Override
+    public Order createOrder(final Order order) {
+            em.persist(order);
+            em.flush();
+            return order;
     }
 }

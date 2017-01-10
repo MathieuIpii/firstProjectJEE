@@ -38,7 +38,5 @@ public interface IProductDAO {
     List<Product> findAllProductByPageAndCategory(int start, int limit, int idCategory);
 
     Map<String,Object> convertJsonToProductForDelete(String jsonProduct);
-
-    void addToCart(int idProduct);
 }
 
