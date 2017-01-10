@@ -22,7 +22,9 @@
             <img class="img" src="resources/img/${productController.product.urlPicture}" alt="" />
             <h:outputText class="desc" value="#{productController.product.description}"></h:outputText>
             <h:outputText class="prix" value="#{productController.product.price}"></h:outputText>
-            <button class="button">Ajouter au panier</button>
+            <h:form>
+                <h:commandButton action="#{productController.addToCart(productController.product)}" class="button" value="Ajouter au panier"></h:commandButton>
+            </h:form>
         </div>
 </h:body>
 </html>

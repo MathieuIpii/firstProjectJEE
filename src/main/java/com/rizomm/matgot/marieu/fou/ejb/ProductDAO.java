@@ -1,6 +1,7 @@
 package com.rizomm.matgot.marieu.fou.ejb;
 
 import com.rizomm.matgot.marieu.fou.model.Category;
+import com.rizomm.matgot.marieu.fou.model.Order;
 import com.rizomm.matgot.marieu.fou.model.OrderLine;
 import com.rizomm.matgot.marieu.fou.model.Product;
 import org.codehaus.jettison.json.JSONArray;
@@ -239,7 +240,7 @@ public class ProductDAO implements IProductDAO, Serializable {
 
     @Override
     public void addToCart(Product product){
-        OrderLine ol = new OrderLine(product,1);
-        em.persist(ol);
+        Order order = new Order(product,1);
+        em.persist(order);
     }
 }
