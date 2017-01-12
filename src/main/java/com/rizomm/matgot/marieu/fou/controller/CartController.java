@@ -29,17 +29,13 @@ public class CartController implements Serializable {
         OD.addToCart(idProduct);
     }
 
-<<<<<<< HEAD
-    public List<Cart> getAllProductInCart(){
-=======
+    public List<Cart> getAllProductInCart() {
+        return OD.getAllProductInCart();
+    }
+
     public void deleteAllProductCart(){
         OD.deleteAllProductCart();
     }
 
-    /*
-    public List<OrderLine> getAllProductInCart(){
->>>>>>> origin/master
-        return OD.getAllProductInCart();
-    }
 
 }

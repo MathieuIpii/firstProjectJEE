@@ -20,11 +20,8 @@ public interface ICartDAO {
 
     void deleteOneProductCart(int idProduct);
 
-<<<<<<< HEAD
     void addToCart(int idProduit);
 
     List<Cart> getAllProductInCart();
-=======
-    void addToCart(int idProduct);
->>>>>>> origin/master
+
 }
