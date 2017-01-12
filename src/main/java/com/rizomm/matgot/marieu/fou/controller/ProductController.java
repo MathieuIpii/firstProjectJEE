@@ -47,6 +47,7 @@ public class ProductController implements Serializable {
 
     public String createProductTest(){
         PD.deleteAllProduct();
+        CD.deleteAllCategory();
         createCat();
 
         Product product1 = new Product(1, 20, 24.99f, "Petite table basse", "une petite table basse tranquille", "table-basse.jpg");

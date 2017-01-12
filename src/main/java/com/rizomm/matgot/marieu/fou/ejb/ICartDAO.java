@@ -20,7 +20,7 @@ public interface ICartDAO {
 
     void deleteOneProductCart(int idProduct);
 
-    void addToCart(int idProduit);
+    void addToCart(int idProduct);
 
     List<Cart> getAllProductInCart();
 

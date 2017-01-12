@@ -29,15 +29,24 @@ public class CartDAO implements ICartDAO, Serializable {
     protected EntityManager em;
 
     @Override
-    public int getNbProductInCart(){
-        return em.createNamedQuery(Cart.COUNT_ALL, Cart.class).getResultList().indexOf(0);
+    public int getNbProductInCart() {
+        //return em.createNamedQuery(Cart.COUNT_ALL, Cart.class).getResultList().indexOf(0);
+        int nbProd = 0;
+        TypedQuery<Cart> query = em.createNamedQuery(Cart.FIND_ALL, Cart.class);
+        List<Cart> listCart = query.getResultList();
+        if (!listCart.isEmpty()) {
+            for (int i = 0; i < listCart.size(); i++) {
+                nbProd += listCart.get(i).getQuantity();
+            }
+        }
+        return nbProd;
     }
 
     @Override
     public Cart createCart(final Cart order) {
-            em.persist(order);
-            em.joinTransaction();
-            return order;
+        em.persist(order);
+        em.joinTransaction();
+        return order;
     }
 
     @Override
@@ -56,24 +65,25 @@ public class CartDAO implements ICartDAO, Serializable {
     }
 
     @Override
-    public void addToCart(int idProduit){
+    public void addToCart(int idProduct){
         TypedQuery<Cart> query = em.createNamedQuery(Cart.FIND_ALL, Cart.class);
-        List<Cart> listeCart = query.getResultList();
-        if(!listeCart.isEmpty()) {
-            for (int i = 0; i < listeCart.size(); i++) {
-                if (listeCart.get(i).getIdProd() == idProduit) {
-                    Cart newCart = new Cart(idProduit, listeCart.get(i).getQuantity()+1);
-                    deleteOneProductCart(idProduit);
+        List<Cart> listCart = query.getResultList();
+        if(!listCart.isEmpty()) {
+            for (int i = 0; i < listCart.size(); i++) {
+                if (listCart.get(i).getIdProd() == idProduct) {
+                    int qty = listCart.get(i).getQuantity()+1;
+                    //deleteOneProductCart(idProduct);
+                    Cart newCart = new Cart(idProduct, qty);
                     em.persist(newCart);
                     em.joinTransaction();
                     return;
                 }else {
-                    Cart newCart = new Cart(idProduit, 1);
+                    Cart newCart = new Cart(idProduct, 1);
                     createCart(newCart);
                 }
             }
         }else {
-            Cart newCart = new Cart(idProduit, 1);
+            Cart newCart = new Cart(idProduct, 1);
             createCart(newCart);
         }
     }
