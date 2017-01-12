@@ -29,24 +29,7 @@ public class CartDAO implements ICartDAO, Serializable {
     protected EntityManager em;
 
     public int getNbProduct(){
-        int qte = 0;
-        qte = em.createNamedQuery(COUNT_ALL, Cart.class).getResultList().indexOf(0);
-
-        //em.createNamedQuery(COUNT_ALL, Cart.class).executeUpdate();
-        //List<Cart> listeOrder = findAllOrder();
-        //if(listeOrder!= null) {
-            /* à refaire
-            OrderLine ol = null;
-            for (int i = 0; i < listeOrder.size(); i++) {
-                ol = em.find(OrderLine.class, listeOrder.get(i));
-                qute += ol.getQuantite();
-            }
-            if (ol != null) {
-                return qute;
-            }
-            */
-        //}
-        return qte;
+        return em.createNamedQuery(COUNT_ALL, Cart.class).getResultList().indexOf(0);
     }
 
     @Override
