@@ -4,7 +4,6 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import java.io.Serializable;
-import java.util.List;
 
 import com.rizomm.matgot.marieu.fou.ejb.ICartDAO;
 import com.rizomm.matgot.marieu.fou.model.Cart;
@@ -22,11 +21,11 @@ public class CartController implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public int getNbProduitInCart(){
-        return OD.getNbProduit();
+        return OD.getNbProduct();
     }
 
-    public void addToCart(int idProduit){
-        OD.addToCart(idProduit);
+    public void addToCart(int idProduct){
+        OD.addToCart(idProduct);
     }
 
     /*

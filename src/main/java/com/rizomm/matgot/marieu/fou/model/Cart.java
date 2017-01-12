@@ -17,11 +17,13 @@ import static com.rizomm.matgot.marieu.fou.model.Cart.*;
 @NamedQueries({
         @NamedQuery(name = FIND_ALL, query = "select c from Cart c"),
         @NamedQuery(name = DELETE_ALL, query = " delete from Cart"),
+        @NamedQuery(name = COUNT_ALL, query = "select count(quantity) from Cart")
 })
 public class Cart implements Serializable{
 
     public static final String FIND_ALL = "Cart.findAllProductCart";
     public static final String DELETE_ALL = "Cart.deleteAllProductCart";
+    public static final String COUNT_ALL = "Cart.countAllProductCart";
 
     @Id
     protected int idProd;

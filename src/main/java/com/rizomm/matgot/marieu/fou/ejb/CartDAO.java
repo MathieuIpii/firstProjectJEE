@@ -28,8 +28,11 @@ public class CartDAO implements ICartDAO, Serializable {
     @PersistenceContext(unitName = "persistence")
     protected EntityManager em;
 
-    public int getNbProduit(){
-        int qute = 0;
+    public int getNbProduct(){
+        int qte = 0;
+        qte = em.createNamedQuery(COUNT_ALL, Cart.class).getResultList().indexOf(0);
+
+        //em.createNamedQuery(COUNT_ALL, Cart.class).executeUpdate();
         //List<Cart> listeOrder = findAllOrder();
         //if(listeOrder!= null) {
             /* à refaire
@@ -43,7 +46,7 @@ public class CartDAO implements ICartDAO, Serializable {
             }
             */
         //}
-        return 0;
+        return qte;
     }
 
     @Override

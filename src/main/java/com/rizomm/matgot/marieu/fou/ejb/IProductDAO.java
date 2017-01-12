@@ -15,8 +15,6 @@ public interface IProductDAO {
 
     Product findProductById(int idProduct);
 
-    Product findProductById(Long idProduct);
-
     List<Product> findAllProduct();
 
     void deleteAllProduct();

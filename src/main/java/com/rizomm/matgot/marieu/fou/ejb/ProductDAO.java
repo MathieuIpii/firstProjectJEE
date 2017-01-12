@@ -52,12 +52,6 @@ public class ProductDAO implements IProductDAO, Serializable {
     }
 
     @Override
-    public Product findProductById(Long idProduct) {
-        Product findProduct = em.find(Product.class, idProduct);
-        return findProduct;
-    }
-
-    @Override
     public List<Product> findAllProduct() {
         TypedQuery<Product> query = em.createNamedQuery(FIND_ALL, Product.class);
         if (isNotTest) {

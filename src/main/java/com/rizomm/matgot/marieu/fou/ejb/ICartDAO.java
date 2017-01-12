@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface ICartDAO {
 
-    int getNbProduit();
+    int getNbProduct();
 
     Cart createCart(Cart order);
 
