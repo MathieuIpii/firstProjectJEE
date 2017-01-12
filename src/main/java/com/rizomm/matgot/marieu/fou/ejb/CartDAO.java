@@ -14,6 +14,7 @@ import java.util.List;
 
 import static com.rizomm.matgot.marieu.fou.helper.Utils.isNotEmpty;
 import static com.rizomm.matgot.marieu.fou.model.Cart.*;
+import static com.rizomm.matgot.marieu.fou.model.Product.FIND_ALL;
 
 /**
  * Created by Mathieu on 17/11/2016.
@@ -44,7 +45,7 @@ public class CartDAO implements ICartDAO, Serializable {
         //}
         return 0;
     }
-    
+
     @Override
     public Cart createCart(final Cart order) {
             em.persist(order);
@@ -58,44 +59,28 @@ public class CartDAO implements ICartDAO, Serializable {
     }
 
     @Override
+    public void deleteOneProductCart(int idProduit) {
+        em.remove(findProductInCart(idProduit));
+    }
+
+    @Override
+    public Cart findProductInCart(int idProduct){
+        return em.find(Cart.class, idProduct);
+    }
+
+    @Override
     public void addToCart(int idProduit){
-        //List<Cart> listeOrder = findAllOrder();
-        /*
-        boolean isPresent = false;
-        if(listeOrder!= null) {
-
-            for (int i = 0; i < listeOrder.size(); i++) {
-                OrderLine ol = em.find(OrderLine.class, listeOrder.get(i));
-                if (ol.getIdProduit() == idProduit){
-                    isPresent = true;
-                    ol.setQuantite(ol.getQuantite()+1);
-                    em.persist(ol);
-                }
+        TypedQuery<Cart> query = em.createNamedQuery(FIND_ALL, Cart.class);
+        List<Cart> listeCart = query.getResultList();
+        for(int i = 0; i < listeCart.size(); i++){
+            if(listeCart.get(i).getIdProd() == idProduit){
+                Cart newCart = new Cart(idProduit, listeCart.get(i).getQuantity()+1);
+                deleteOneProductCart(idProduit);
+                em.persist(newCart);
+                return;
             }
-
         }
-        if(!isPresent){
-            OrderLine ol = new OrderLine(1,idProduit,1);
-            em.persist(ol);
-        }
-        */
+        Cart newCart = new Cart(idProduit, 1);
+        createCart(newCart);
     }
-/*
-    @Override
-    public List<OrderLine> getAllProductInCart(){
-        TypedQuery<OrderLine> query = em.createQuery(Cart.FIND_ALLOL, OrderLine.class);
-        em.joinTransaction();
-        return query.getResultList();
-    }
-
-    @Override
-    public List<Product> getProductInList(List<OrderLine> listOl){
-        List<Product> listProduct = null;
-        for(int i = 0; i < listOl.size(); i++){
-            Product p = em.find(Product.class, listOl.get(i).getIdProduit());
-            listProduct.add(p);
-        }
-        return listProduct;
-    }
-*/
 }
