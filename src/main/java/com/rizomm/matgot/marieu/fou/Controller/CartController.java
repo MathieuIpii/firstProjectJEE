@@ -33,9 +33,4 @@ public class CartController implements Serializable {
     public List<OrderLine> getAllProductInCart(){
         return OD.getAllProductInCart();
     }
-
-    public List<Product> getProductInList(){
-        List<OrderLine> listOl = getAllProductInCart();
-        return OD.getProductInList(listOl);
-    }
 }
