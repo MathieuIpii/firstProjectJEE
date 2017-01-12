@@ -12,19 +12,9 @@ public interface ICartDAO {
 
     int getNbProduit();
 
-    void deleteAllOrderLine();
+    Cart createCart(Cart order);
 
-    Cart createOrder(Cart order);
-
-    List<Cart> findAllOrder();
-
-    //List<OrderLine> findAllOrderLine();
-
-    void deleteAllOrder();
+    void deleteCart();
 
     void addToCart(int idProduit);
-
-    //List<OrderLine> getAllProductInCart();
-
-    //List<Product> getProductInList(List<OrderLine> listOl);
 }

@@ -29,8 +29,8 @@ public class CartDAO implements ICartDAO, Serializable {
 
     public int getNbProduit(){
         int qute = 0;
-        List<Cart> listeOrder = findAllOrder();
-        if(listeOrder!= null) {
+        //List<Cart> listeOrder = findAllOrder();
+        //if(listeOrder!= null) {
             /* à refaire
             OrderLine ol = null;
             for (int i = 0; i < listeOrder.size(); i++) {
@@ -41,36 +41,18 @@ public class CartDAO implements ICartDAO, Serializable {
                 return qute;
             }
             */
-        }
+        //}
         return 0;
     }
 
     @Override
-    public List<Cart> findAllOrder() {
-        TypedQuery<Cart> query = em.createNamedQuery(Cart.FIND_ALL, Cart.class);
-        em.joinTransaction();
-        return query.getResultList();
-    }
-/*
-    @Override
-    public List<OrderLine> findAllOrderLine() {
-        TypedQuery<OrderLine> query = em.createNamedQuery(Cart.FIND_ALLOL, OrderLine.class);
-        em.joinTransaction();
-        return query.getResultList();
-    }
-*/
-    @Override
-    public void deleteAllOrder() {
+    public void deleteCart() {
         em.createNamedQuery(DELETE_ALL, Cart.class).executeUpdate();
     }
 
-    @Override
-    public void deleteAllOrderLine() {
-        //em.createNamedQuery(Cart.DELETE_ALLOL, OrderLine.class).executeUpdate();
-    }
 
     @Override
-    public Cart createOrder(final Cart order) {
+    public Cart createCart(final Cart order) {
             em.persist(order);
             em.flush();
             return order;
@@ -78,7 +60,7 @@ public class CartDAO implements ICartDAO, Serializable {
 
     @Override
     public void addToCart(int idProduit){
-        List<Cart> listeOrder = findAllOrder();
+        //List<Cart> listeOrder = findAllOrder();
         /*
         boolean isPresent = false;
         if(listeOrder!= null) {
