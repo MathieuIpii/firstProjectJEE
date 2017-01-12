@@ -20,12 +20,16 @@ public class CartController implements Serializable {
     private Product product = new Product();
     private static final long serialVersionUID = 1L;
 
-    public int getNbProduitInCart(){
+    public int getNbProductInCart(){
         return OD.getNbProduct();
     }
 
     public void addToCart(int idProduct){
         OD.addToCart(idProduct);
+    }
+
+    public void deleteAllProductCart(){
+        OD.deleteAllProductCart();
     }
 
     /*

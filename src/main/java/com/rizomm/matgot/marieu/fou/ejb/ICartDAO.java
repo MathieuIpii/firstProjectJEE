@@ -18,7 +18,7 @@ public interface ICartDAO {
 
     Cart findProductInCart(int idProduct);
 
-    void deleteOneProductCart(int idProduit);
+    void deleteOneProductCart(int idProduct);
 
-    void addToCart(int idProduit);
+    void addToCart(int idProduct);
 }

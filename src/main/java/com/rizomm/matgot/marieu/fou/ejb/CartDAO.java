@@ -45,8 +45,8 @@ public class CartDAO implements ICartDAO, Serializable {
     }
 
     @Override
-    public void deleteOneProductCart(int idProduit) {
-        em.remove(findProductInCart(idProduit));
+    public void deleteOneProductCart(int idProduct) {
+        em.remove(findProductInCart(idProduct));
     }
 
     @Override
@@ -55,18 +55,18 @@ public class CartDAO implements ICartDAO, Serializable {
     }
 
     @Override
-    public void addToCart(int idProduit){
+    public void addToCart(int idProduct){
         TypedQuery<Cart> query = em.createNamedQuery(FIND_ALL, Cart.class);
         List<Cart> listeCart = query.getResultList();
         for(int i = 0; i < listeCart.size(); i++){
-            if(listeCart.get(i).getIdProd() == idProduit){
-                Cart newCart = new Cart(idProduit, listeCart.get(i).getQuantity()+1);
-                deleteOneProductCart(idProduit);
+            if(listeCart.get(i).getIdProd() == idProduct){
+                Cart newCart = new Cart(idProduct, listeCart.get(i).getQuantity()+1);
+                deleteOneProductCart(idProduct);
                 em.persist(newCart);
                 return;
             }
         }
-        Cart newCart = new Cart(idProduit, 1);
+        Cart newCart = new Cart(idProduct, 1);
         createCart(newCart);
     }
 }
