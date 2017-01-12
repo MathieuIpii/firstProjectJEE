@@ -29,19 +29,19 @@ public class CartDAO implements ICartDAO, Serializable {
     protected EntityManager em;
 
     public int getNbProduct(){
-        return em.createNamedQuery(COUNT_ALL, Cart.class).getResultList().indexOf(0);
+        return em.createNamedQuery(Cart.COUNT_ALL, Cart.class).getResultList().indexOf(0);
     }
 
     @Override
     public Cart createCart(final Cart order) {
             em.persist(order);
-            em.flush();
+            em.joinTransaction();
             return order;
     }
 
     @Override
     public void deleteAllProductCart() {
-        em.createNamedQuery(DELETE_ALL, Cart.class).executeUpdate();
+        em.createNamedQuery(Cart.DELETE_ALL, Cart.class).executeUpdate();
     }
 
     @Override
@@ -56,17 +56,29 @@ public class CartDAO implements ICartDAO, Serializable {
 
     @Override
     public void addToCart(int idProduit){
-        TypedQuery<Cart> query = em.createNamedQuery(FIND_ALL, Cart.class);
+        TypedQuery<Cart> query = em.createNamedQuery(Cart.FIND_ALL, Cart.class);
         List<Cart> listeCart = query.getResultList();
-        for(int i = 0; i < listeCart.size(); i++){
-            if(listeCart.get(i).getIdProd() == idProduit){
-                Cart newCart = new Cart(idProduit, listeCart.get(i).getQuantity()+1);
-                deleteOneProductCart(idProduit);
-                em.persist(newCart);
-                return;
+        if(!listeCart.isEmpty()) {
+            for (int i = 0; i < listeCart.size(); i++) {
+                if (listeCart.get(i).getIdProd() == idProduit) {
+                    Cart newCart = new Cart(idProduit, listeCart.get(i).getQuantity()+1);
+                    deleteOneProductCart(idProduit);
+                    em.persist(newCart);
+                    em.joinTransaction();
+                    return;
+                }else {
+                    Cart newCart = new Cart(idProduit, 1);
+                    createCart(newCart);
+                }
             }
+        }else {
+            Cart newCart = new Cart(idProduit, 1);
+            createCart(newCart);
         }
-        Cart newCart = new Cart(idProduit, 1);
-        createCart(newCart);
+    }
+
+    @Override
+    public List<Cart> getAllProductInCart() {
+        return em.createNamedQuery(Cart.FIND_ALL, Cart.class).getResultList();
     }
 }

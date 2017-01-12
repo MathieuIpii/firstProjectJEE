@@ -21,4 +21,6 @@ public interface ICartDAO {
     void deleteOneProductCart(int idProduit);
 
     void addToCart(int idProduit);
+
+    List<Cart> getAllProductInCart();
 }

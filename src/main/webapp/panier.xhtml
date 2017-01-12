@@ -25,21 +25,13 @@
         </div>
     </div>
 
-        <h:dataTable class="table_product" value="#{cartController.getProductInList()}" var="product">
+        <h:dataTable class="table_product" value="#{cartController.getAllProductInCart()}" var="cart">
             <h:column class="column-product">
                 <div class="product">
-                    <h:outputText class="nom" value="#{product.nom}"></h:outputText>
-                    <div class="content-img">
-                        <img class="img" src="resources/img/${product.urlPicture}" alt="" />
-                    </div>
-                    <h:outputText class="desc" value="#{product.description}"></h:outputText>
-                    <h:outputText class="prix" value="#{product.price}"></h:outputText>
+                    <h:outputText class="nom" value="#{cart.idProd}"></h:outputText>
                 </div>
             </h:column>
         </h:dataTable>
-        <div class="content-img">
-            <p class="intro">Votre panier est vidde</p>
-        </div>
 
 </h:body>
 </html>

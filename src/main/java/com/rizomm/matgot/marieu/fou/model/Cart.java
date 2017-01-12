@@ -17,7 +17,7 @@ import static com.rizomm.matgot.marieu.fou.model.Cart.*;
 @NamedQueries({
         @NamedQuery(name = FIND_ALL, query = "select c from Cart c"),
         @NamedQuery(name = DELETE_ALL, query = " delete from Cart"),
-        @NamedQuery(name = COUNT_ALL, query = "select count(quantity) from Cart")
+        @NamedQuery(name = COUNT_ALL, query = "select count(c.quantity) from Cart c")
 })
 public class Cart implements Serializable{
 
