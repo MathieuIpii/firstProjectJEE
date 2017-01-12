@@ -21,7 +21,7 @@ public class CartController implements Serializable {
     private Product product = new Product();
     private static final long serialVersionUID = 1L;
 
-    public int getNbProduitInCart(){
+    public int getNbProductInCart(){
         return OD.getNbProduct();
     }
 
@@ -29,7 +29,16 @@ public class CartController implements Serializable {
         OD.addToCart(idProduct);
     }
 
+<<<<<<< HEAD
     public List<Cart> getAllProductInCart(){
+=======
+    public void deleteAllProductCart(){
+        OD.deleteAllProductCart();
+    }
+
+    /*
+    public List<OrderLine> getAllProductInCart(){
+>>>>>>> origin/master
         return OD.getAllProductInCart();
     }
 

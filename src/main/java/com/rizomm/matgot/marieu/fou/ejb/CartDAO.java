@@ -45,8 +45,8 @@ public class CartDAO implements ICartDAO, Serializable {
     }
 
     @Override
-    public void deleteOneProductCart(int idProduit) {
-        em.remove(findProductInCart(idProduit));
+    public void deleteOneProductCart(int idProduct) {
+        em.remove(findProductInCart(idProduct));
     }
 
     @Override
@@ -55,6 +55,7 @@ public class CartDAO implements ICartDAO, Serializable {
     }
 
     @Override
+<<<<<<< HEAD
     public void addToCart(int idProduit){
         TypedQuery<Cart> query = em.createNamedQuery(Cart.FIND_ALL, Cart.class);
         List<Cart> listeCart = query.getResultList();
@@ -70,15 +71,31 @@ public class CartDAO implements ICartDAO, Serializable {
                     Cart newCart = new Cart(idProduit, 1);
                     createCart(newCart);
                 }
+=======
+    public void addToCart(int idProduct){
+        TypedQuery<Cart> query = em.createNamedQuery(FIND_ALL, Cart.class);
+        List<Cart> listeCart = query.getResultList();
+        for(int i = 0; i < listeCart.size(); i++){
+            if(listeCart.get(i).getIdProd() == idProduct){
+                Cart newCart = new Cart(idProduct, listeCart.get(i).getQuantity()+1);
+                deleteOneProductCart(idProduct);
+                em.persist(newCart);
+                return;
+>>>>>>> origin/master
             }
         }else {
             Cart newCart = new Cart(idProduit, 1);
             createCart(newCart);
         }
+<<<<<<< HEAD
     }
 
     @Override
     public List<Cart> getAllProductInCart() {
         return em.createNamedQuery(Cart.FIND_ALL, Cart.class).getResultList();
+=======
+        Cart newCart = new Cart(idProduct, 1);
+        createCart(newCart);
+>>>>>>> origin/master
     }
 }

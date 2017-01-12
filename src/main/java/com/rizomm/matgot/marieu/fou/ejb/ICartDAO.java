@@ -18,9 +18,13 @@ public interface ICartDAO {
 
     Cart findProductInCart(int idProduct);
 
-    void deleteOneProductCart(int idProduit);
+    void deleteOneProductCart(int idProduct);
 
+<<<<<<< HEAD
     void addToCart(int idProduit);
 
     List<Cart> getAllProductInCart();
+=======
+    void addToCart(int idProduct);
+>>>>>>> origin/master
 }
