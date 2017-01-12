@@ -20,14 +20,12 @@ import static com.rizomm.matgot.marieu.fou.model.Cart.*;
 })
 public class Cart implements Serializable{
 
-    public static final String FIND_ALL = "Cart.findAllOrder";
-    public static final String DELETE_ALL = "Cart.deleteAllOrder";
+    public static final String FIND_ALL = "Cart.findAllProductCart";
+    public static final String DELETE_ALL = "Cart.deleteAllProductCart";
 
     @Id
     protected int idProd;
     protected int quantity;
-
-    //protected Map<Integer, int> cart;
 
     public Cart(int idProd, int quantity) {
         this.idProd = idProd;

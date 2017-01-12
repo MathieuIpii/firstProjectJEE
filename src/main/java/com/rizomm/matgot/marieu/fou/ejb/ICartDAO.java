@@ -14,7 +14,7 @@ public interface ICartDAO {
 
     Cart createCart(Cart order);
 
-    void deleteCart();
+    void deleteAllProductCart();
 
     void addToCart(int idProduit);
 }

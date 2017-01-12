@@ -44,18 +44,17 @@ public class CartDAO implements ICartDAO, Serializable {
         //}
         return 0;
     }
-
-    @Override
-    public void deleteCart() {
-        em.createNamedQuery(DELETE_ALL, Cart.class).executeUpdate();
-    }
-
-
+    
     @Override
     public Cart createCart(final Cart order) {
             em.persist(order);
             em.flush();
             return order;
+    }
+
+    @Override
+    public void deleteAllProductCart() {
+        em.createNamedQuery(DELETE_ALL, Cart.class).executeUpdate();
     }
 
     @Override
