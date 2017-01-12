@@ -28,7 +28,8 @@ public class CartDAO implements ICartDAO, Serializable {
     @PersistenceContext(unitName = "persistence")
     protected EntityManager em;
 
-    public int getNbProduct(){
+    @Override
+    public int getNbProductInCart(){
         return em.createNamedQuery(Cart.COUNT_ALL, Cart.class).getResultList().indexOf(0);
     }
 

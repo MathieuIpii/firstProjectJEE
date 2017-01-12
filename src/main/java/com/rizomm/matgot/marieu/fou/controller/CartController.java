@@ -22,7 +22,7 @@ public class CartController implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public int getNbProductInCart(){
-        return OD.getNbProduct();
+        return OD.getNbProductInCart();
     }
 
     public void addToCart(int idProduct){

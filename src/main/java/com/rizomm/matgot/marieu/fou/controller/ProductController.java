@@ -35,6 +35,10 @@ public class ProductController implements Serializable {
         return PD.findAllProduct();
     }
 
+    public Product findProductById(int idProd){
+        return PD.findProductById(idProd);
+    }
+
     public String display(String page, int id){
         product.setId(id);
         product = PD.findProductById(id);

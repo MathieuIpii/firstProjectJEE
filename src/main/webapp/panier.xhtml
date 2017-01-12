@@ -20,7 +20,7 @@
         </div>
         <div class="panier">
             <a href="panier.xhtml">
-                Nombre d'article dans votre panier(<h:outputText value="#{cartController.getNbProduitInCart()}"></h:outputText>)
+                Nombre d'article dans votre panier(<h:outputText value="#{cartController.getNbProductInCart()}"></h:outputText>)
             </a>
         </div>
     </div>
@@ -28,10 +28,15 @@
         <h:dataTable class="table_product" value="#{cartController.getAllProductInCart()}" var="cart">
             <h:column class="column-product">
                 <div class="product">
-                    <h:outputText class="nom" value="#{cart.idProd}"></h:outputText>
+                    <h:outputText class="nom" value="#{productController.findProductById(cart.idProd).name}"></h:outputText>
+                    <div class="content-img">
+                        <img class="img" src="resources/img/${productController.findProductById(cart.idProd).urlPicture}" alt="" />
+                    </div>
+                    <h:outputText class="desc" value="#{productController.findProductById(cart.idProd).description}"></h:outputText>
+                    <h:outputText class="prix" value="#{productController.findProductById(cart.idProd).price}"></h:outputText>
+                    <h:outputText class="qute" value="#{cart.quantity}"></h:outputText>
                 </div>
             </h:column>
         </h:dataTable>
-
 </h:body>
 </html>
