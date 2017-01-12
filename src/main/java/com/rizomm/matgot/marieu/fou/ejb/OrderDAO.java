@@ -51,9 +51,9 @@ public class OrderDAO implements IOrderDAO, Serializable {
         return query.getResultList();
     }
 
-
+    @Override
     public List<OrderLine> findAllOrderLine() {
-        TypedQuery<OrderLine> query = em.createNamedQuery(OrderLine.FIND_ALL, OrderLine.class);
+        TypedQuery<OrderLine> query = em.createNamedQuery(COrder.FIND_ALLOL, OrderLine.class);
         em.joinTransaction();
         return query.getResultList();
     }
@@ -63,9 +63,9 @@ public class OrderDAO implements IOrderDAO, Serializable {
         em.createNamedQuery(DELETE_ALL, COrder.class).executeUpdate();
     }
 
-
+    @Override
     public void deleteAllOrderLine() {
-        em.createNamedQuery(OrderLine.DELETE_ALL, OrderLine.class).executeUpdate();
+        em.createNamedQuery(COrder.DELETE_ALLOL, OrderLine.class).executeUpdate();
     }
 
     @Override
@@ -97,7 +97,7 @@ public class OrderDAO implements IOrderDAO, Serializable {
 
     @Override
     public List<OrderLine> getAllProductInCart(){
-        TypedQuery<OrderLine> query = em.createQuery(OrderLine.FIND_ALL, OrderLine.class);
+        TypedQuery<OrderLine> query = em.createQuery(COrder.FIND_ALLOL, OrderLine.class);
         em.joinTransaction();
         return query.getResultList();
     }

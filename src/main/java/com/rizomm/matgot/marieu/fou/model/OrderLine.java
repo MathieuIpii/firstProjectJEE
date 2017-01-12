@@ -13,14 +13,8 @@ import static com.rizomm.matgot.marieu.fou.model.COrder.FIND_ALL;
 
 //@IdClass(OrderLine.class)
 @Entity
-@NamedQueries({
-        @NamedQuery(name = FIND_ALL, query = "select c from OrderLine c order by c.idLine asc"),
-        @NamedQuery(name = DELETE_ALL, query = " delete from OrderLine ")
-})
 public class OrderLine implements Serializable{
 
-    public static final String FIND_ALL = "OrderLine.findAllOrderLine";
-    public static final String DELETE_ALL = "OrderLine.deleteAllOrderLine";
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idLine;

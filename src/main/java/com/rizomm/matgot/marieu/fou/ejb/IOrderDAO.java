@@ -13,9 +13,13 @@ public interface IOrderDAO {
 
     int getNbProduit();
 
+    void deleteAllOrderLine();
+
     COrder createOrder(COrder order);
 
     List<COrder> findAllOrder();
+
+    List<OrderLine> findAllOrderLine();
 
     void deleteAllOrder();
 

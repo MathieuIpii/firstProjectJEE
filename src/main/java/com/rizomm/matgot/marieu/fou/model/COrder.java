@@ -12,12 +12,16 @@ import static com.rizomm.matgot.marieu.fou.model.COrder.*;
 @Entity
 @NamedQueries({
         @NamedQuery(name = FIND_ALL, query = "select c from COrder c order by c.idCommande asc"),
-        @NamedQuery(name = DELETE_ALL, query = " delete from COrder")
+        @NamedQuery(name = DELETE_ALL, query = " delete from COrder"),
+        @NamedQuery(name = FIND_ALLOL, query = "select c from OrderLine c order by c.idLine asc"),
+        @NamedQuery(name = DELETE_ALLOL, query = " delete from OrderLine ")
 })
 public class COrder implements Serializable{
 
     public static final String FIND_ALL = "COrder.findAllOrder";
     public static final String DELETE_ALL = "COrder.deleteAllOrder";
+    public static final String FIND_ALLOL = "OrderLine.findAllOrderLine";
+    public static final String DELETE_ALLOL = "OrderLine.deleteAllOrderLine";
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
