@@ -1,4 +1,4 @@
-package com.rizomm.matgot.marieu.fou.Controller;
+package com.rizomm.matgot.marieu.fou.controller;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
