@@ -1,10 +1,9 @@
-package com.rizomm.matgot.marieu.fou.Controller;
+package com.rizomm.matgot.marieu.fou.controller;
 
 import com.rizomm.matgot.marieu.fou.ejb.ICategoryDAO;
 import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
 import com.rizomm.matgot.marieu.fou.model.Category;
 import com.rizomm.matgot.marieu.fou.model.Product;
-import com.rizomm.matgot.marieu.fou.helper.Utils;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;

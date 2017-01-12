@@ -1,4 +1,4 @@
-package com.rizomm.matgot.marieu.fou.Controller;
+package com.rizomm.matgot.marieu.fou.controller;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
@@ -6,9 +6,8 @@ import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
-import com.rizomm.matgot.marieu.fou.ejb.IOrderDAO;
-import com.rizomm.matgot.marieu.fou.model.COrder;
-import com.rizomm.matgot.marieu.fou.model.OrderLine;
+import com.rizomm.matgot.marieu.fou.ejb.ICartDAO;
+import com.rizomm.matgot.marieu.fou.model.Cart;
 import com.rizomm.matgot.marieu.fou.model.Product;
 
 @Named
@@ -16,9 +15,9 @@ import com.rizomm.matgot.marieu.fou.model.Product;
 public class CartController implements Serializable {
 
     @EJB
-    private IOrderDAO OD;
+    private ICartDAO OD;
 
-    private COrder order = new COrder();
+    private Cart order = new Cart();
     private Product product = new Product();
     private static final long serialVersionUID = 1L;
 
@@ -30,6 +29,7 @@ public class CartController implements Serializable {
         OD.addToCart(idProduit);
     }
 
+    /*
     public List<OrderLine> getAllProductInCart(){
         return OD.getAllProductInCart();
     }
@@ -38,4 +38,5 @@ public class CartController implements Serializable {
         List<OrderLine> listOl = getAllProductInCart();
         return OD.getProductInList(listOl);
     }
+    */
 }

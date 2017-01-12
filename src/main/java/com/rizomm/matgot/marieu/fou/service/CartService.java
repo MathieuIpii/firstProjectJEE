@@ -1,22 +1,15 @@
 package com.rizomm.matgot.marieu.fou.service;
 
 import com.rizomm.matgot.marieu.fou.ejb.IProductDAO;
-import com.rizomm.matgot.marieu.fou.model.OrderLine;
-import com.rizomm.matgot.marieu.fou.model.Product;
-import org.codehaus.jettison.json.JSONArray;
-import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateful;
 import javax.ejb.StatefulTimeout;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import static com.rizomm.matgot.marieu.fou.helper.Utils.*;
 
 /**
  * Created by Mathieu on 17/11/2016.
@@ -27,7 +20,7 @@ import static com.rizomm.matgot.marieu.fou.helper.Utils.*;
 @Remote
 public class CartService implements IShoppingCartService {
 
-    private List<OrderLine> listShoppingCart = new ArrayList();
+    //private List<OrderLine> listShoppingCart = new ArrayList();
 
     @Override
     public Map<String, Object> addProductCart(String jsonString, IProductDAO PD) {
