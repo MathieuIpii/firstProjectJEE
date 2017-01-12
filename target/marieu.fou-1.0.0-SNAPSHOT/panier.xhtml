@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough" xmlns:c="http://java.sun.com/jsp/jstl/core" xml:lang="en"
+      lang="en">
+
+<h:head>
+    <title>Mathieu &amp; Margot Companny</title>
+    <link type="text/css" rel="stylesheet"
+          href="/marieu7735518915051112382.fou-1.0.0-SNAPSHOT/resources/css/styles.css" />
+</h:head>
+
+<h:body>
+    <div class="bandeau-header">
+        <div class="titre">
+            <h1>Marieu Company</h1>
+        </div>
+        <div class="panier">
+            <a href="panier.xhtml">
+                Nombre d'article dans votre panier(<h:outputText value="#{cartController.getNbProduitInCart()}"></h:outputText>)
+            </a>
+        </div>
+    </div>
+
+        <h:dataTable class="table_product" value="#{cartController.getProductInList()}" var="product">
+            <h:column class="column-product">
+                <div class="product">
+                    <h:outputText class="nom" value="#{product.nom}"></h:outputText>
+                    <div class="content-img">
+                        <img class="img" src="resources/img/${product.urlPicture}" alt="" />
+                    </div>
+                    <h:outputText class="desc" value="#{product.description}"></h:outputText>
+                    <h:outputText class="prix" value="#{product.price}"></h:outputText>
+                </div>
+            </h:column>
+        </h:dataTable>
+        <div class="content-img">
+            <p class="intro">Votre panier est vidde</p>
+        </div>
+
+</h:body>
+</html>

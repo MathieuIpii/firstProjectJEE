@@ -91,3 +91,18 @@ body{
 .intro{
     text-align: center;
 }
+.titre{
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    width: 49%;
+}
+.panier{
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    width: 49%;
+}
+.panier a{
+    text-decoration: none;
+}

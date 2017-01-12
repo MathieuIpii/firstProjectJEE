@@ -1,8 +1,5 @@
 package com.rizomm.matgot.marieu.fou.ejb;
 
-import com.rizomm.matgot.marieu.fou.model.Category;
-import com.rizomm.matgot.marieu.fou.model.Order;
-import com.rizomm.matgot.marieu.fou.model.OrderLine;
 import com.rizomm.matgot.marieu.fou.model.Product;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;

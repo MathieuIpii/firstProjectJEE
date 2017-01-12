@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <title>Mathieu &amp; Margot Companny</title>
+        <link type="text/css" rel="stylesheet"
+              href="/marieu7735518915051112382.fou-1.0.0-SNAPSHOT/resources/css/styles.css" />
+    </h:head>
+
+<h:body>
+    <div class="bandeau-header">
+        <div class="titre">
+            <h1>Marieu Company</h1>
+        </div>
+        <div class="panier">
+            <a href="panier.xhtml">
+                Nombre d'article dans votre panier(<h:outputText value="#{cartController.getNbProduitInCart()}"></h:outputText>)
+            </a>
+        </div>
+    </div>
+
+        <div class="fiche">
+            <h:outputText class="nom" value="#{productController.product.name}"></h:outputText>
+            <img class="img" src="resources/img/${productController.product.urlPicture}" alt="" />
+            <h:outputText class="desc" value="#{productController.product.description}"></h:outputText>
+            <h:outputText class="prix" value="#{productController.product.price}"></h:outputText>
+            <h:form>
+                <h:commandButton action="#{cartController.addToCart(productController.product.id)}" class="button" value="Ajouter au panier"></h:commandButton>
+            </h:form>
+        </div>
+</h:body>
+</html>

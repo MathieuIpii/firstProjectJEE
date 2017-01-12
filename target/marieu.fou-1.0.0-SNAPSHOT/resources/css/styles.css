@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+}
+.bandeau-header{
+    background-color: lightcoral;
+    color: #fff;
+    margin: 0;
+    padding: 8px;
+}
+.table_product{
+    text-align: center;
+    width: 100%;
+}
+.table_product tr{
+    display: inline-block;
+    max-width: 350px;
+    min-width: 350px;
+    vertical-align: top;
+    width: 350px;
+}
+.table_product td{
+    max-width: 350px;
+    min-width: 350px;
+    width: 350px;
+}
+.product, .fiche{
+    border: 1px solid #eee;
+    margin: 2rem;
+    text-align: center;
+}
+.product .nom, .fiche .nom{
+    background-color: lightcoral;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+.product .img, .fiche .img{
+    display: block;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+.content-img{
+    height: 400px;
+    max-height: 400px;
+    min-height: 400px;
+    overflow: hidden;
+    width: 100%;
+}
+.product .desc, .fiche .desc{
+    border-top: 1px solid #eeeeee;
+    display: block;
+}
+.product .prix, .fiche .prix{
+    display: block;
+    font-weight: bold;
+}
+.product .prix:after, .fiche .prix:after{
+    content: "€";
+}
+.product .button, .fiche .button, .formulaireCreateProd .button{
+    background-color: lightcoral;
+    border: none;
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+.product .voirPlus{
+    border-top: 1px solid #eeeeee;
+}
+.fiche{
+    margin: 2rem auto;
+    text-align: center;
+    width: 40%;
+}
+.formulaireCreateProd{
+    text-align: center;
+}
+.formulaireCreateProd .button{
+    margin: 3rem auto;
+    width: 35%;
+}
+.intro{
+    text-align: center;
+}
+.titre{
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    width: 49%;
+}
+.panier{
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    width: 49%;
+}
+.panier a{
+    text-decoration: none;
+}

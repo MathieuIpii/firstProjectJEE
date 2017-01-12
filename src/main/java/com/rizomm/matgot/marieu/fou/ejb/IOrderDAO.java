@@ -1,6 +1,7 @@
 package com.rizomm.matgot.marieu.fou.ejb;
 
-import com.rizomm.matgot.marieu.fou.model.Order;
+import com.rizomm.matgot.marieu.fou.model.COrder;
+import com.rizomm.matgot.marieu.fou.model.OrderLine;
 import com.rizomm.matgot.marieu.fou.model.Product;
 
 import java.util.List;
@@ -12,9 +13,15 @@ public interface IOrderDAO {
 
     int getNbProduit();
 
-    Order createOrder(Order order);
+    COrder createOrder(COrder order);
 
-    List<Order> findAllOrder();
+    List<COrder> findAllOrder();
 
     void deleteAllOrder();
+
+    void addToCart(int idProduit);
+
+    List<OrderLine> getAllProductInCart();
+
+    List<Product> getProductInList(List<OrderLine> listOl);
 }

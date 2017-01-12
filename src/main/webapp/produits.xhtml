@@ -9,14 +9,16 @@
     <h:head>
         <title>Mathieu &amp; Margot Companny</title>
         <link type="text/css" rel="stylesheet"
-              href="/marieu.fou-1.0.0-SNAPSHOT/resources/css/styles.css" />
+              href="/marieu7735518915051112382.fou-1.0.0-SNAPSHOT/resources/css/styles.css" />
     </h:head>
 
     <h:body>
         <div class="bandeau-header">
-            <h1>Marieu Company</h1>
-            <div>
-                <a href="">
+            <div class="titre">
+                <h1>Marieu Company</h1>
+            </div>
+            <div class="panier">
+                <a href="panier.xhtml">
                     Nombre d'article dans votre panier(<h:outputText value="#{cartController.getNbProduitInCart()}"></h:outputText>)
                 </a>
             </div>
@@ -31,7 +33,7 @@
                     <h:outputText class="desc" value="#{product.description}"></h:outputText>
                     <h:outputText class="prix" value="#{product.price}"></h:outputText>
                     <h:form>
-                        <h:commandButton action="#{productController.addToCart(productController.product)}" class="button" value="Ajouter au panier"></h:commandButton>
+                        <h:commandButton action="#{cartController.addToCart(productController.product.id)}" class="button" value="Ajouter au panier"></h:commandButton>
                         <h:commandButton class="button voirPlus" value="Voir plus" action="#{productController.display('ficheProduit', product.id)}"></h:commandButton>
                     </h:form>
                 </div>
