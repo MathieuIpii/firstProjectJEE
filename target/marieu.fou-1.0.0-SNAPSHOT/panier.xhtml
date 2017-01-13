@@ -62,6 +62,11 @@
                 <f:facet class="col" name="header">Quantité</f:facet>
                 #{cart.quantity}
             </h:column>
+
+            <h:column>
+                <f:facet class="col" name="header">Total</f:facet>
+                #{cart.quantity * productController.findProductById(cart.idProd).price}
+            </h:column>
         </h:dataTable>
 </h:body>
 </html>

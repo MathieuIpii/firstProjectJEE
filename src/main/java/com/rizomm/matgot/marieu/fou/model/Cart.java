@@ -51,4 +51,5 @@ public class Cart implements Serializable{
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
 }

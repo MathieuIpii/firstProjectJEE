@@ -36,6 +36,4 @@ public class CartController implements Serializable {
     public void deleteAllProductCart(){
         OD.deleteAllProductCart();
     }
-
-
 }

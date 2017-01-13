@@ -104,6 +104,8 @@ body{
     width: 49%;
 }
 .panier a{
+    color: #ffffff;
+    cursor: pointer;
     text-decoration: none;
 }
 .table_product_panier .col{
@@ -116,4 +118,6 @@ body{
 }
 .viderPanier{
     float: right;
+    margin: 1rem;
+    width: 15%;
 }

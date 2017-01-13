@@ -3,6 +3,7 @@ package com.rizomm.matgot.marieu.fou.ejb;
 import com.rizomm.matgot.marieu.fou.model.Cart;
 import com.rizomm.matgot.marieu.fou.model.Product;
 
+import javax.ejb.EJB;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.inject.Named;
@@ -27,6 +28,8 @@ public class CartDAO implements ICartDAO, Serializable {
 
     @PersistenceContext(unitName = "persistence")
     protected EntityManager em;
+
+    protected ProductDAO PD;
 
     @Override
     public int getNbProductInCart() {
