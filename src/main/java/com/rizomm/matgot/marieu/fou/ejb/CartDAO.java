@@ -29,8 +29,6 @@ public class CartDAO implements ICartDAO, Serializable {
     @PersistenceContext(unitName = "persistence")
     protected EntityManager em;
 
-    protected ProductDAO PD;
-
     @Override
     public int getNbProductInCart() {
         //return em.createNamedQuery(Cart.COUNT_ALL, Cart.class).getResultList().indexOf(0);
@@ -58,17 +56,12 @@ public class CartDAO implements ICartDAO, Serializable {
     }
 
     @Override
-    public void deleteOneProductCart(int idProduct) {
-        em.remove(findProductInCart(idProduct));
-    }
-
-    @Override
     public Cart findProductInCart(int idProduct){
         return em.find(Cart.class, idProduct);
     }
 
     @Override
-    public void addToCart(int idProduct){
+    public String addToCart(int idProduct){
         List<Cart> listCart = getAllProductInCart();
         boolean isFind = false;
         if(!listCart.isEmpty()) {
@@ -85,6 +78,7 @@ public class CartDAO implements ICartDAO, Serializable {
             Cart newCart = new Cart(idProduct, 1);
             createCart(newCart);
         }
+        return "produit.xhtml";
     }
 
     @Override

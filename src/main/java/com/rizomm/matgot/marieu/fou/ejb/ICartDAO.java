@@ -18,9 +18,7 @@ public interface ICartDAO {
 
     Cart findProductInCart(int idProduct);
 
-    void deleteOneProductCart(int idProduct);
-
-    void addToCart(int idProduct);
+    String addToCart(int idProduct);
 
     List<Cart> getAllProductInCart();
 

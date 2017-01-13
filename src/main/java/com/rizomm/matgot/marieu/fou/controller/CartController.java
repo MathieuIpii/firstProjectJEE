@@ -17,16 +17,14 @@ public class CartController implements Serializable {
     @EJB
     private ICartDAO OD;
 
-    private Cart order = new Cart();
-    private Product product = new Product();
     private static final long serialVersionUID = 1L;
 
     public int getNbProductInCart(){
         return OD.getNbProductInCart();
     }
 
-    public void addToCart(int idProduct){
-        OD.addToCart(idProduct);
+    public String addToCart(int idProduct){
+        return OD.addToCart(idProduct);
     }
 
     public List<Cart> getAllProductInCart() {

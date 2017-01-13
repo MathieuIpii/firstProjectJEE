@@ -82,10 +82,6 @@ public class Product implements Serializable {
         return idCat;
     }
 
-    public void setCategory(int idCat) {
-        this.idCat = idCat;
-    }
-
     public int getStock() {
         return stock;
     }

@@ -40,16 +40,7 @@ public class Cart implements Serializable{
         return idProd;
     }
 
-    public void setIdProd(int idProd) {
-        this.idProd = idProd;
-    }
-
     public int getQuantity() {
         return quantity;
     }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
 }
