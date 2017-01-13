@@ -78,7 +78,7 @@ public class CartDAO implements ICartDAO, Serializable {
             Cart newCart = new Cart(idProduct, 1);
             createCart(newCart);
         }
-        return "produit.xhtml";
+        return "produits.xhtml";
     }
 
     @Override

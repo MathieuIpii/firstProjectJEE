@@ -28,22 +28,6 @@
             <h:commandButton action="#{cartController.deleteAllProductCart()}" class="viderPanier" value="Vider le panier"></h:commandButton>
         </h:form>
         <h:dataTable class="table_product_panier" value="#{cartController.getAllProductInCart()}" var="cart">
-            <!--<h:column class="column-product">
-                <div class="product">
-                    <div class="content-img">
-                        <img class="img" src="resources/img/${productController.findProductById(cart.idProd).urlPicture}" alt="" />
-                    </div>
-                    <div class="content">
-                        <h:outputText class="nom" value="#{productController.findProductById(cart.idProd).name}"></h:outputText>
-                    </div>
-                    <div class="content">
-                        <h:outputText class="prix" value="#{productController.findProductById(cart.idProd).price}"></h:outputText>
-                    </div>
-                    <div class="content">
-                        <h:outputText class="qute" value="#{cart.quantity}"></h:outputText>
-                    </div>
-                </div>
-            </h:column>-->
             <h:column>
                 <f:facet class="col" name="header"></f:facet>
                 <img class="img" src="resources/img/${productController.findProductById(cart.idProd).urlPicture}" alt="" />

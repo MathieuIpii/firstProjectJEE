@@ -30,7 +30,7 @@
             <h:outputText class="desc" value="#{productController.product.description}"></h:outputText>
             <h:outputText class="prix" value="#{productController.product.price}"></h:outputText>
             <h:form>
-                <h:commandButton action="#{cartController.addToCart(productController.product.id)}" class="button" value="Ajouter au panier"></h:commandButton>
+                <h:commandButton action="#{cartController.addToCart(product.id)}" class="button" value="Ajouter au panier"></h:commandButton>
             </h:form>
         </div>
 </h:body>
