@@ -43,10 +43,10 @@ public class CartDAO implements ICartDAO, Serializable {
     }
 
     @Override
-    public Cart createCart(final Cart order) {
-        em.persist(order);
-        em.joinTransaction();
-        return order;
+    public Cart createCart(final Cart cart) {
+            em.persist(cart);
+            em.joinTransaction();
+            return cart;
     }
 
     @Override
@@ -66,23 +66,19 @@ public class CartDAO implements ICartDAO, Serializable {
 
     @Override
     public void addToCart(int idProduct){
-        TypedQuery<Cart> query = em.createNamedQuery(Cart.FIND_ALL, Cart.class);
-        List<Cart> listCart = query.getResultList();
+        List<Cart> listCart = getAllProductInCart();
+        boolean isFind = false;
         if(!listCart.isEmpty()) {
             for (int i = 0; i < listCart.size(); i++) {
-                if (listCart.get(i).getIdProd() == idProduct) {
+                if (listCart.get(i).getIdProd() == idProduct && !isFind) {
                     int qty = listCart.get(i).getQuantity()+1;
-                    //deleteOneProductCart(idProduct);
                     Cart newCart = new Cart(idProduct, qty);
-                    em.persist(newCart);
-                    em.joinTransaction();
-                    return;
-                }else {
-                    Cart newCart = new Cart(idProduct, 1);
-                    createCart(newCart);
+                    em.merge(newCart);
+                    isFind = true;
                 }
             }
-        }else {
+        }
+        if(!isFind) {
             Cart newCart = new Cart(idProduct, 1);
             createCart(newCart);
         }

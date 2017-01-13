@@ -7,7 +7,7 @@ body{
     margin: 0;
     padding: 8px;
 }
-.table_product{
+.table_product, .table_product_panier{
     text-align: center;
     width: 100%;
 }
@@ -63,7 +63,7 @@ body{
 .product .prix:after, .fiche .prix:after{
     content: "€";
 }
-.product .button, .fiche .button, .formulaireCreateProd .button{
+.product .button, .fiche .button, .formulaireCreateProd .button, .viderPanier{
     background-color: lightcoral;
     border: none;
     color: #fff;
@@ -105,4 +105,15 @@ body{
 }
 .panier a{
     text-decoration: none;
+}
+.table_product_panier .col{
+    max-width: 24%;
+    min-width: 24%;
+    width: 24%;
+}
+.table_product_panier .img{
+    width: 30%;
+}
+.viderPanier{
+    float: right;
 }

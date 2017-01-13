@@ -21,7 +21,6 @@
                 <a href="panier.xhtml">
                     Nombre d'article dans votre panier(<h:outputText value="#{cartController.getNbProductInCart()}"></h:outputText>)
                 </a>
-                <h:commandButton action="#{cartController.deleteAllProductCart()}" class="button" value="Vider le panier"></h:commandButton>
             </div>
         </div>
         <h:dataTable class="table_product" value="#{productController.findAllProduct()}" var="product">

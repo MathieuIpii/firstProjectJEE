@@ -4,7 +4,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:a="http://xmlns.jcp.org/jsf/passthrough" xmlns:c="http://java.sun.com/jsp/jstl/core" xml:lang="en"
+      xmlns:f="http://java.sun.com/jsf/core" xml:lang="en"
       lang="en">
 
 <h:head>
@@ -24,18 +24,43 @@
             </a>
         </div>
     </div>
-
-        <h:dataTable class="table_product" value="#{cartController.getAllProductInCart()}" var="cart">
-            <h:column class="column-product">
+        <h:form>
+            <h:commandButton action="#{cartController.deleteAllProductCart()}" class="viderPanier" value="Vider le panier"></h:commandButton>
+        </h:form>
+        <h:dataTable class="table_product_panier" value="#{cartController.getAllProductInCart()}" var="cart">
+            <!--<h:column class="column-product">
                 <div class="product">
-                    <h:outputText class="nom" value="#{productController.findProductById(cart.idProd).name}"></h:outputText>
                     <div class="content-img">
                         <img class="img" src="resources/img/${productController.findProductById(cart.idProd).urlPicture}" alt="" />
                     </div>
-                    <h:outputText class="desc" value="#{productController.findProductById(cart.idProd).description}"></h:outputText>
-                    <h:outputText class="prix" value="#{productController.findProductById(cart.idProd).price}"></h:outputText>
-                    <h:outputText class="qute" value="#{cart.quantity}"></h:outputText>
+                    <div class="content">
+                        <h:outputText class="nom" value="#{productController.findProductById(cart.idProd).name}"></h:outputText>
+                    </div>
+                    <div class="content">
+                        <h:outputText class="prix" value="#{productController.findProductById(cart.idProd).price}"></h:outputText>
+                    </div>
+                    <div class="content">
+                        <h:outputText class="qute" value="#{cart.quantity}"></h:outputText>
+                    </div>
                 </div>
+            </h:column>-->
+            <h:column>
+                <f:facet class="col" name="header"></f:facet>
+                <img class="img" src="resources/img/${productController.findProductById(cart.idProd).urlPicture}" alt="" />
+            </h:column>
+            <h:column>
+                <f:facet class="col" name="header">Produit</f:facet>
+                 #{productController.findProductById(cart.idProd).name}
+            </h:column>
+
+            <h:column>
+                <f:facet class="col" name="header">Prix</f:facet>
+                #{productController.findProductById(cart.idProd).price}
+            </h:column>
+
+            <h:column>
+                <f:facet class="col" name="header">Quantité</f:facet>
+                #{cart.quantity}
             </h:column>
         </h:dataTable>
 </h:body>
